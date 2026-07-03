@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajjan Rijschool – Rijlessen Utrecht & Gorinchem | Schakel & Automaat</title>
+  <meta name="description" content="Ajjan Rijschool biedt professionele rijlessen in Utrecht en Gorinchem. Schakel en automaat. Gratis proefles, CBR erkend, meertalig (NL/EN/AR). Boek nu!">
+  <meta name="keywords" content="rijschool Utrecht, rijschool Gorinchem, rijlessen Utrecht, rijbewijs halen, schakel rijles, automaat rijles, CBR erkend, rijschool Ajjan">
+  <meta name="author" content="Ajjan Rijschool">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="o7TWZzJSNLvPgFpHZ837KU5uz8YLk9RvapErEu_Dr74" />
+  <link rel="canonical" href="https://ajjanrijschool.nl">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231D4ED8'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='26' fill='white'%3EAR%3C/text%3E%3C/svg%3E">
+
+  <!-- Open Graph (WhatsApp / Facebook preview) -->
+  <meta property="og:title" content="Ajjan Rijschool – Utrecht & Gorinchem">
+  <meta property="og:description" content="Professionele rijlessen op maat. Gratis proefles. Schakel & automaat. CBR erkend. Meertalig (NL/EN/AR).">
+  <meta property="og:url" content="https://ajjanrijschool.nl">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:#1D4ED8; --blue-dark:#1E3A8A; --blue-light:#EFF6FF;
+      --orange:#EA580C; --orange-light:#FFF7ED;
+      --dark:#0F172A; --muted:#64748B; --border:#E2E8F0;
+      --white:#FFFFFF; --bg:#F8FAFC; --card:#FFFFFF;
+      --radius:16px; --shadow:0 4px 24px rgba(15,23,42,0.08); --shadow-lg:0 16px 48px rgba(15,23,42,0.12);
+    }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--dark); line-height:1.6; overflow-x:hidden; }
+
+    /* NAV */
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 2rem; height:72px; display:flex; align-items:center; justify-content:space-between; gap:1rem; transition:box-shadow .3s; }
+    .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+    .logo-icon { width:42px; height:42px; background:linear-gradient(135deg,var(--blue),var(--orange)); border-radius:10px; display:flex; align-items:center; justify-content:center; }
+    .logo-icon svg { width:22px; height:22px; fill:white; }
+    .logo-text strong { display:block; font-size:1rem; font-weight:800; color:var(--dark); }
+    .logo-text span { font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+    .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--muted); font-size:.9rem; font-weight:500; transition:color .2s; }
+    .nav-links a:hover { color:var(--blue); }
+    .nav-right { display:flex; align-items:center; gap:.75rem; }
+    .lang-switcher { display:flex; gap:4px; background:var(--bg); border-radius:8px; padding:4px; border:1px solid var(--border); }
+    .lang-btn { background:none; border:none; cursor:pointer; padding:4px 10px; border-radius:6px; font-size:.78rem; font-weight:600; color:var(--muted); transition:all .2s; }
+    .lang-btn.active { background:var(--blue); color:white; }
+    .lang-btn:hover:not(.active) { background:var(--border); }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; border-radius:10px; font-weight:600; font-size:.9rem; text-decoration:none; cursor:pointer; border:none; transition:all .2s; white-space:nowrap; font-family:inherit; }
+    .btn-primary { background:var(--blue); color:white; }
+    .btn-primary:hover { background:var(--blue-dark); transform:translateY(-1px); box-shadow:0 4px 16px rgba(29,78,216,.3); }
+    .btn-orange { background:var(--orange); color:white; }
+    .btn-orange:hover { background:#c2410c; transform:translateY(-1px); box-shadow:0 4px 16px rgba(234,88,12,.3); }
+    .btn-outline { background:transparent; color:var(--blue); border:2px solid var(--blue); }
+    .btn-outline:hover { background:var(--blue); color:white; transform:translateY(-1px); }
+    .btn-whatsapp { background:#25D366; color:white; }
+    .btn-whatsapp:hover { background:#128C7E; transform:translateY(-1px); }
+    .btn-lg { padding:14px 32px; font-size:1rem; border-radius:12px; }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--dark); border-radius:2px; transition:all .3s; }
+    .mobile-nav { position:fixed; top:72px; left:0; right:0; z-index:99; background:white; border-bottom:1px solid var(--border); padding:1.5rem 2rem; display:none; flex-direction:column; gap:1rem; box-shadow:var(--shadow-lg); }
+    .mobile-nav.open { display:flex; }
+    .mobile-nav a { color:var(--dark); text-decoration:none; font-weight:600; font-size:1rem; }
+
+    /* HERO */
+    .hero { min-height:100vh; display:flex; align-items:center; padding:72px 2rem 0; background:linear-gradient(135deg,#0F1F5C 0%,#1D4ED8 55%,#1E40AF 100%); position:relative; overflow:hidden; }
+    .hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"); }
+    .hero-inner { max-width:1200px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; padding:6rem 0 4rem; position:relative; z-index:1; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:50px; padding:6px 16px; color:white; font-size:.82rem; font-weight:600; margin-bottom:1.5rem; }
+    .hero-badge .dot { width:8px; height:8px; background:#4ADE80; border-radius:50%; animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+    .hero h1 { font-size:clamp(2.2rem,4vw,3.4rem); font-weight:900; color:white; line-height:1.1; margin-bottom:1.25rem; }
+    .hero h1 em { font-style:italic; color:#FCD34D; font-family:'Playfair Display',serif; }
+    .hero-sub { color:rgba(255,255,255,.8); font-size:1.05rem; line-height:1.7; margin-bottom:2rem; max-width:460px; }
+    .hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:3rem; }
+    .hero-stats { display:flex; gap:2rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,.15); }
+    .hero-stat strong { display:block; font-size:1.6rem; font-weight:800; color:white; }
+    .hero-stat span { font-size:.8rem; color:rgba(255,255,255,.65); }
+    .hero-visual { display:flex; align-items:center; justify-content:center; position:relative; }
+    .car-scene { position:relative; width:100%; max-width:500px; }
+    .float-card { position:absolute; background:white; border-radius:14px; padding:12px 16px; box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:10px; font-size:.82rem; font-weight:600; color:var(--dark); animation:floatCard 3s ease-in-out infinite; z-index:2; }
+    @keyframes floatCard { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float-card:nth-child(2){animation-delay:0s}
+    .float-card:nth-child(3){animation-delay:1s}
+    .float-card:nth-child(4){animation-delay:2s}
+    .fc-icon { width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
+
+    /* TRUST BAR */
+    .trust-bar { background:white; border-bottom:1px solid var(--border); padding:1.25rem 2rem; }
+    .trust-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; }
+    .trust-item { display:flex; align-items:center; gap:10px; font-size:.88rem; font-weight:600; color:var(--dark); }
+    .ti-icon { width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; }
+
+    /* SECTIONS */
+    section { padding:5rem 2rem; }
+    .section-inner { max-width:1200px; margin:0 auto; }
+    .section-label { display:inline-flex; align-items:center; gap:8px; background:var(--blue-light); color:var(--blue); border-radius:50px; padding:5px 14px; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; }
+    .section-title { font-size:clamp(1.8rem,3vw,2.6rem); font-weight:800; line-height:1.2; margin-bottom:1rem; }
+    .section-sub { color:var(--muted); font-size:1.05rem; line-height:1.7; max-width:560px; }
+
+    /* STORY */
+    .story { background:white; }
+    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .story-img-wrap { width:100%; aspect-ratio:4/5; background:linear-gradient(135deg,#1D4ED8,#7C3AED); border-radius:24px; overflow:hidden; position:relative; }
+    .story-badge-float { position:absolute; bottom:-20px; right:-20px; background:var(--orange); color:white; border-radius:16px; padding:16px 20px; box-shadow:var(--shadow-lg); text-align:center; }
+    .story-badge-float strong { display:block; font-size:1.8rem; font-weight:900; }
+    .story-badge-float span { font-size:.78rem; opacity:.9; }
+    .story-flag { position:absolute; top:-16px; left:-16px; background:white; border-radius:12px; padding:10px 14px; box-shadow:var(--shadow); display:flex; align-items:center; gap:8px; font-size:.82rem; font-weight:600; }
+    .story-visual { position:relative; }
+    .story-content .quote { font-size:1.1rem; font-style:italic; color:var(--blue); border-left:4px solid var(--blue); padding-left:1.25rem; margin:1.5rem 0; line-height:1.7; font-family:'Playfair Display',serif; }
+    [dir="rtl"] .story-content .quote { border-left:none; border-right:4px solid var(--blue); padding-left:0; padding-right:1.25rem; }
+    .story-points { list-style:none; margin-top:1.5rem; display:flex; flex-direction:column; gap:12px; }
+    .story-points li { display:flex; align-items:flex-start; gap:12px; font-size:.95rem; }
+    .sp-icon { color:var(--blue); font-size:1.1rem; flex-shrink:0; margin-top:1px; }
+
+    /* PACKAGES */
+    .packages { background:var(--bg); }
+    .pkg-tabs { display:flex; gap:8px; margin-bottom:2.5rem; background:white; border:1px solid var(--border); border-radius:14px; padding:6px; width:fit-content; }
+    .pkg-tab { padding:10px 28px; border-radius:10px; border:none; font-size:.92rem; font-weight:600; cursor:pointer; transition:all .2s; color:var(--muted); background:none; font-family:inherit; }
+    .pkg-tab.active { background:var(--blue); color:white; }
+    .pkg-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.25rem; }
+    .pkg-panel { display:none; }
+    .pkg-panel.active { display:grid; }
+    .pkg-card { background:white; border-radius:var(--radius); border:2px solid var(--border); padding:1.75rem; position:relative; transition:all .3s; }
+    .pkg-card:hover { border-color:var(--blue); transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .pkg-card.featured { border-color:var(--blue); }
+    .pkg-card.featured::before { content:attr(data-label); position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--blue); color:white; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:4px 14px; border-radius:50px; white-space:nowrap; }
+    .pkg-icon { width:52px; height:52px; border-radius:14px; background:var(--blue-light); color:var(--blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1rem; }
+    .pkg-card.featured .pkg-icon { background:var(--blue); color:white; }
+    .pkg-card.proefles { background:linear-gradient(135deg,#ECFDF5,#D1FAE5); border-color:#6EE7B7; }
+    .pkg-card.proefles .pkg-icon { background:#6EE7B7; color:#065F46; }
+    .pkg-card.proefles .pkg-price { color:#065F46; }
+    .pkg-name { font-size:1.1rem; font-weight:700; margin-bottom:.5rem; }
+    .pkg-lessons { font-size:.82rem; color:var(--muted); margin-bottom:1rem; }
+    .pkg-price { font-size:2rem; font-weight:900; color:var(--dark); line-height:1; }
+    .pkg-price sup { font-size:1.1rem; font-weight:700; vertical-align:super; }
+    .pkg-perlesson { font-size:.78rem; color:var(--muted); margin-bottom:1.25rem; }
+    .pkg-features { list-style:none; margin-bottom:1.5rem; display:flex; flex-direction:column; gap:8px; }
+    .pkg-features li { display:flex; align-items:center; gap:8px; font-size:.85rem; }
+    .pkg-features li::before { content:'✓'; color:var(--blue); font-weight:700; flex-shrink:0; }
+    .pkg-cta { width:100%; justify-content:center; }
+
+    /* HOW */
+    .how { background:white; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:3rem; }
+    .step { text-align:center; padding:2rem 1.5rem; border-radius:var(--radius); background:var(--bg); position:relative; }
+    .step-num { width:56px; height:56px; border-radius:50%; background:var(--blue); color:white; font-size:1.4rem; font-weight:900; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; }
+    .step-icon { font-size:2rem; margin-bottom:1rem; }
+    .step h3 { font-size:1.05rem; font-weight:700; margin-bottom:.5rem; }
+    .step p { font-size:.88rem; color:var(--muted); line-height:1.6; }
+    .step-connector { position:absolute; top:56px; right:-2rem; width:4rem; height:2px; background:linear-gradient(90deg,var(--blue),var(--orange)); }
+    .step:last-child .step-connector { display:none; }
+
+    /* WHY */
+    .why { background:var(--bg); }
+    .why-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem; margin-top:3rem; }
+    .why-card { background:white; border-radius:var(--radius); padding:2rem; border:1px solid var(--border); transition:all .3s; }
+    .why-card:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
+    .wc-icon { font-size:2rem; margin-bottom:1rem; }
+    .why-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:.5rem; }
+    .why-card p { font-size:.88rem; color:var(--muted); line-height:1.6; }
+
+    /* REVIEWS */
+    .reviews { background:white; }
+    .review-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.5rem; margin-top:3rem; }
+    .review-card { background:var(--bg); border-radius:var(--radius); padding:1.75rem; border:1px solid var(--border); }
+    .review-stars { color:#FBBF24; font-size:1rem; margin-bottom:1rem; letter-spacing:2px; }
+    .review-text { font-size:.92rem; line-height:1.7; color:var(--dark); margin-bottom:1.25rem; font-style:italic; }
+    .review-author { display:flex; align-items:center; gap:12px; }
+    .review-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--blue),var(--orange)); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:.9rem; flex-shrink:0; }
+    .review-name { font-weight:700; font-size:.9rem; }
+    .review-meta { font-size:.78rem; color:var(--muted); }
+
+    /* BOOKING */
+    .booking { background:linear-gradient(135deg,#0F1F5C 0%,#1D4ED8 100%); position:relative; overflow:hidden; }
+    .booking::before { content:''; position:absolute; top:-50%; right:-10%; width:600px; height:600px; background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 70%); border-radius:50%; }
+    .booking-inner { position:relative; z-index:1; }
+    .booking-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+    .booking-info h2 { color:white; margin-bottom:1rem; }
+    .booking-info p { color:rgba(255,255,255,.75); margin-bottom:2rem; line-height:1.7; }
+    .contact-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+    .contact-list li { display:flex; align-items:center; gap:12px; color:rgba(255,255,255,.85); font-size:.92rem; }
+    .cl-icon { width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
+    .contact-list a { color:rgba(255,255,255,.9); text-decoration:none; }
+    .contact-list a:hover { color:white; text-decoration:underline; }
+    .booking-wa { margin-top:2rem; background:rgba(255,255,255,.1); border-radius:14px; padding:1.25rem; border:1px solid rgba(255,255,255,.15); }
+    .booking-wa p { color:rgba(255,255,255,.7); font-size:.82rem; margin-bottom:.75rem; }
+    .booking-form { background:white; border-radius:20px; padding:2.5rem; box-shadow:0 24px 64px rgba(0,0,0,.2); }
+    .booking-form h3 { font-size:1.3rem; font-weight:700; margin-bottom:1.75rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:0; }
+    .form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:1rem; }
+    .form-group label { font-size:.82rem; font-weight:600; color:var(--dark); }
+    .form-group input, .form-group select, .form-group textarea { padding:12px 14px; border-radius:10px; border:2px solid var(--border); font-family:inherit; font-size:.9rem; color:var(--dark); transition:border-color .2s; outline:none; background:var(--bg); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--blue); background:white; }
+    .form-group textarea { resize:vertical; min-height:90px; }
+    .form-submit { width:100%; padding:14px; border-radius:12px; border:none; cursor:pointer; justify-content:center; }
+    .success-msg { display:none; text-align:center; padding:2rem; background:#ECFDF5; border-radius:14px; border:2px solid #6EE7B7; }
+    .success-msg.show { display:block; }
+    .sm-icon { font-size:3rem; margin-bottom:1rem; }
+    .success-msg h3 { color:#065F46; font-size:1.2rem; font-weight:700; }
+    .success-msg p { color:#047857; font-size:.9rem; }
+
+    /* FOOTER */
+    footer { background:var(--dark); color:rgba(255,255,255,.7); padding:4rem 2rem 2rem; }
+    .footer-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; }
+    .footer-brand p { font-size:.88rem; line-height:1.7; color:rgba(255,255,255,.5); margin:1rem 0 1.25rem; }
+    .social-row { display:flex; gap:10px; }
+    .social-btn { width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,.08); color:rgba(255,255,255,.7); display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1rem; transition:all .2s; }
+    .social-btn:hover { background:var(--blue); color:white; }
+    .footer-col h4 { color:white; font-size:.9rem; font-weight:700; margin-bottom:1rem; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+    .footer-col ul li a { color:rgba(255,255,255,.5); text-decoration:none; font-size:.85rem; transition:color .2s; }
+    .footer-col ul li a:hover { color:white; }
+    .footer-bottom { max-width:1200px; margin:0 auto; padding-top:2rem; border-top:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:.82rem; color:rgba(255,255,255,.35); }
+
+    /* FLOATING WA */
+    .wa-float { position:fixed; bottom:2rem; right:2rem; z-index:50; display:flex; align-items:center; gap:10px; }
+    [dir="rtl"] .wa-float { right:auto; left:2rem; }
+    .wa-float-btn { width:60px; height:60px; border-radius:50%; background:#25D366; color:white; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.6rem; box-shadow:0 8px 24px rgba(37,211,102,.4); transition:all .3s; animation:waPulse 3s ease-in-out infinite; }
+    .wa-float-btn:hover { transform:scale(1.1); }
+    @keyframes waPulse { 0%,100%{box-shadow:0 8px 24px rgba(37,211,102,.4)} 50%{box-shadow:0 8px 40px rgba(37,211,102,.7)} }
+    .wa-tooltip { background:white; border-radius:10px; padding:8px 14px; font-size:.82rem; font-weight:600; color:var(--dark); box-shadow:var(--shadow); white-space:nowrap; opacity:0; transform:translateX(10px); transition:all .3s; }
+    .wa-float:hover .wa-tooltip { opacity:1; transform:translateX(0); }
+    [dir="rtl"] .wa-tooltip { transform:translateX(-10px); }
+    [dir="rtl"] .wa-float:hover .wa-tooltip { transform:translateX(0); }
+
+    /* REVEAL */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s ease,transform .6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* MOBILE */
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .hero-inner{grid-template-columns:1fr;text-align:center;gap:2rem;padding:3rem 0 2rem}
+      .hero-visual{display:none}
+      .hero-ctas{justify-content:center}
+      .hero-stats{justify-content:center}
+      .story-grid{grid-template-columns:1fr}
+      .story-visual{display:none}
+      .steps{grid-template-columns:1fr}
+      .step-connector{display:none}
+      .booking-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+      .form-row{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .trust-inner{justify-content:center}
+      .footer-grid{grid-template-columns:1fr}
+      .pkg-tabs{flex-wrap:wrap}
+      section{padding:3.5rem 1.25rem}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5zM7.5 14c-.83 0-1.5.67-1.5 1.5S6.67 17 7.5 17 9 16.33 9 15.5 8.33 14 7.5 14zm9 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+    </div>
+    <div class="logo-text">
+      <strong>Ajjan Rijschool</strong>
+      <span>Utrecht &amp; Gorinchem</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#packages" data-i18n="nav_packages">Pakketten</a></li>
+    <li><a href="#how" data-i18n="nav_how">Hoe werkt het?</a></li>
+    <li><a href="#about" data-i18n="nav_about">Over ons</a></li>
+    <li><a href="#reviews" data-i18n="nav_reviews">Reviews</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('nl')">NL</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+    </div>
+    <a href="#contact" class="btn btn-primary" data-i18n="nav_book">Boek nu</a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#packages" onclick="toggleMenu()" data-i18n="nav_packages">Pakketten</a>
+  <a href="#how" onclick="toggleMenu()" data-i18n="nav_how">Hoe werkt het?</a>
+  <a href="#about" onclick="toggleMenu()" data-i18n="nav_about">Over ons</a>
+  <a href="#reviews" onclick="toggleMenu()" data-i18n="nav_reviews">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()" data-i18n="nav_contact">Contact</a>
+  <a href="https://wa.me/31640401174" class="btn btn-whatsapp" style="justify-content:center" target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span><span data-i18n="hero_badge">✓ Proefles gratis · Utrecht &amp; Gorinchem</span></div>
+      <h1 data-i18n="hero_h1">Rij je <em>rijbewijs</em> met vertrouwen</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Persoonlijke rijlessen op maat. Schakel of automaat. Van proefles tot slagingsgarantie — Ajjan begeleidt je stap voor stap.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-orange btn-lg" data-i18n="hero_cta1">📅 Plan je proefles</a>
+        <a href="#packages" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.4);color:white;background:transparent" data-i18n="hero_cta2">Bekijk pakketten →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="car-scene">
+        <div class="float-card" style="top:0;right:0">
+          <div class="fc-icon" style="background:#EFF6FF">🚗</div>
+          <div><div style="font-size:.7rem;color:#64748B" data-i18n="fc1a">Schakel rijles</div><div>€55 / les</div></div>
+        </div>
+        <div class="float-card" style="top:90px;left:-30px">
+          <div class="fc-icon" style="background:#ECFDF5">🆓</div>
+          <div><div style="font-size:.7rem;color:#64748B" data-i18n="fc2a">Proefles</div><div style="color:#065F46" data-i18n="fc2b">Gratis!</div></div>
+        </div>
+        <div class="float-card" style="top:185px;right:-10px">
+          <div class="fc-icon" style="background:#FFF7ED">🏆</div>
+          <div><div style="font-size:.7rem;color:#64748B" data-i18n="fc3a">Geslaagd</div><div>⭐⭐⭐⭐⭐</div></div>
+        </div>
+        <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin-top:80px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.25))">
+          <rect x="0" y="210" width="480" height="90" rx="10" fill="#111827"/>
+          <rect x="0" y="245" width="480" height="5" fill="none" stroke="#FCD34D" stroke-width="4" stroke-dasharray="40 20" opacity=".7"/>
+          <rect x="80" y="130" width="320" height="90" rx="14" fill="#1E40AF"/>
+          <rect x="120" y="95" width="240" height="70" rx="12" fill="#2563EB"/>
+          <rect x="133" y="103" width="95" height="52" rx="7" fill="#BAE6FD" opacity=".92"/>
+          <rect x="252" y="103" width="95" height="52" rx="7" fill="#BAE6FD" opacity=".92"/>
+          <rect x="400" y="155" width="20" height="16" rx="4" fill="#FDE68A"/>
+          <rect x="60" y="155" width="16" height="16" rx="4" fill="#FCA5A5" opacity=".9"/>
+          <line x1="240" y1="132" x2="240" y2="218" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+          <rect x="80" y="170" width="320" height="7" rx="3" fill="rgba(255,255,255,.12)"/>
+          <circle cx="160" cy="222" r="30" fill="#111827" stroke="#374151" stroke-width="3"/>
+          <circle cx="160" cy="222" r="18" fill="#374151"/>
+          <circle cx="160" cy="222" r="7" fill="#9CA3AF"/>
+          <circle cx="320" cy="222" r="30" fill="#111827" stroke="#374151" stroke-width="3"/>
+          <circle cx="320" cy="222" r="18" fill="#374151"/>
+          <circle cx="320" cy="222" r="7" fill="#9CA3AF"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="ti-icon" style="background:#EFF6FF">📍</div><span data-i18n="trust1">Utrecht &amp; Gorinchem</span></div>
+    <div class="trust-item"><div class="ti-icon" style="background:#ECFDF5">✅</div><span data-i18n="trust2">CBR erkend rijschool</span></div>
+    <div class="trust-item"><div class="ti-icon" style="background:#FFF7ED">🆓</div><span data-i18n="trust3">Proefles gratis</span></div>
+    <div class="trust-item"><div class="ti-icon" style="background:#FDF4FF">💬</div><span data-i18n="trust4">WhatsApp bereikbaar</span></div>
+    <div class="trust-item"><div class="ti-icon" style="background:#F0FDF4">🏆</div><span data-i18n="trust5">Schakel &amp; automaat</span></div>
+  </div>
+</div>
+
+<!-- ABOUT / STORY -->
+<section class="story" id="about">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-visual reveal">
+        <div class="story-img-wrap">
+          <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <defs>
+              <linearGradient id="sg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1D4ED8"/>
+                <stop offset="100%" style="stop-color:#7C3AED"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="400" fill="url(#sg1)"/>
+            <circle cx="160" cy="90" r="52" fill="rgba(255,255,255,.18)"/>
+            <circle cx="160" cy="80" r="32" fill="rgba(255,255,255,.25)"/>
+            <path d="M105 195 Q160 168 215 195 L225 330 H95 Z" fill="rgba(255,255,255,.18)"/>
+            <text x="160" y="90" text-anchor="middle" font-size="38">👩</text>
+            <text x="260" y="70" font-size="22">⭐</text>
+            <text x="45" y="130" font-size="16">⭐</text>
+            <text x="255" y="180" font-size="13">⭐</text>
+            <text x="160" y="240" text-anchor="middle" fill="white" font-size="15" font-weight="700" font-family="sans-serif">Ajjan</text>
+            <text x="160" y="260" text-anchor="middle" fill="rgba(255,255,255,.65)" font-size="11" font-family="sans-serif">Rijinstructeur · Utrecht</text>
+            <rect x="40" y="290" width="240" height="2" fill="rgba(255,255,255,.15)"/>
+            <text x="160" y="320" text-anchor="middle" fill="rgba(255,255,255,.6)" font-size="11" font-family="sans-serif">🇸🇾 → 🇳🇱  Haar verhaal inspireert</text>
+            <rect x="0" y="355" width="320" height="15" fill="#AE1C28" opacity=".45"/>
+            <rect x="0" y="370" width="320" height="15" fill="white" opacity=".15"/>
+            <rect x="0" y="385" width="320" height="15" fill="#21468B" opacity=".45"/>
+          </svg>
+        </div>
+        <div class="story-badge-float">
+          <strong>🇸🇾→🇳🇱</strong>
+          <span data-i18n="story_badge">Van Syrië naar jouw rijbewijs</span>
+        </div>
+        <div class="story-flag">
+          <span>📍</span><span data-i18n="story_flag">Utrecht &amp; Gorinchem</span>
+        </div>
+      </div>
+      <div class="story-content reveal">
+        <div class="section-label" data-i18n="story_label">Ons verhaal</div>
+        <h2 class="section-title" data-i18n="story_h2_safe">Van strijd naar succes — jouw rij-instructeur</h2>
+        <p data-i18n="story_p1">Ajjan vluchtte uit Syrië tijdens de oorlog. Ze bouwde haar leven opnieuw op in Nederland — met doorzettingsvermogen, moed en de droom om mensen te helpen. Vandaag is ze een gecertificeerde rijinstructeur die haar passie elke dag deelt.</p>
+        <div class="quote" data-i18n="story_quote">"Ik weet wat het betekent om opnieuw te beginnen. Ik help jou om rijden te leren met geduld, warmte en professionaliteit."</div>
+        <p data-i18n="story_p2">Bij Ajjan Rijschool krijg je geen nummertje. Je krijgt een instructeur die écht om jou geeft, die jouw tempo begrijpt en die jou klaarstoomt voor het CBR examen.</p>
+        <ul class="story-points">
+          <li><span class="sp-icon">✅</span><span data-i18n="sp1">Gecertificeerd rijinstructeur (CBR erkend)</span></li>
+          <li><span class="sp-icon">✅</span><span data-i18n="sp2">Lessen in het Nederlands, Engels &amp; Arabisch</span></li>
+          <li><span class="sp-icon">✅</span><span data-i18n="sp3">Persoonlijke aanpak — jouw tempo, jouw leerstijl</span></li>
+          <li><span class="sp-icon">✅</span><span data-i18n="sp4">Beschikbaar in Utrecht en Gorinchem</span></li>
+        </ul>
+        <div style="margin-top:2rem"><a href="#contact" class="btn btn-primary btn-lg" data-i18n="story_cta">Maak een afspraak →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label" data-i18n="pkg_label">Rijlespakketten</div>
+      <h2 class="section-title" data-i18n="pkg_h2">Kies jouw pakket</h2>
+      <p class="section-sub" data-i18n="pkg_sub">Van losse lessen tot complete pakketten. Schakel of automaat — kies wat bij jou past.</p>
+    </div>
+    <div class="pkg-tabs reveal" style="margin-top:2rem">
+      <button class="pkg-tab active" onclick="switchTab('schakel')" data-i18n="tab_schakel">🔧 Schakel</button>
+      <button class="pkg-tab" onclick="switchTab('automaat')" data-i18n="tab_automaat">⚡ Automaat</button>
+    </div>
+
+    <!-- SCHAKEL PANEL -->
+    <div class="pkg-grid pkg-panel active" id="tab-schakel">
+      <div class="pkg-card proefles reveal">
+        <div class="pkg-icon">🆓</div>
+        <div class="pkg-name" data-i18n="pkg_proefles">Proefles</div>
+        <div class="pkg-lessons" data-i18n="pkg_proefles_sub">Maak kennis met Ajjan</div>
+        <div class="pkg-price"><sup>€</sup>0</div>
+        <div class="pkg-perlesson" data-i18n="pkg_free">Helemaal gratis!</div>
+        <ul class="pkg-features">
+          <li data-i18n="pf1">Kennismaking met de instructeur</li>
+          <li data-i18n="pf2">Beoordeling van jouw niveau</li>
+          <li data-i18n="pf3">Geen verplichtingen</li>
+        </ul>
+        <a href="#contact" class="btn btn-orange pkg-cta" data-i18n="pkg_book_free">Plan gratis proefles</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">🚗</div>
+        <div class="pkg-name" data-i18n="pkg_los">Losse rijles</div>
+        <div class="pkg-lessons" data-i18n="pkg_los_sub">Flexibel bijboken</div>
+        <div class="pkg-price"><sup>€</sup>55</div>
+        <div class="pkg-perlesson" data-i18n="perles">Per les (60 min)</div>
+        <ul class="pkg-features">
+          <li data-i18n="pf4">Inclusief voor- en nabespreking</li>
+          <li data-i18n="pf5">Moderne lesauto</li>
+          <li data-i18n="pf6">Flexibele planning</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/pgZV4St3rZ28tZzpCFSFq" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card featured reveal" data-label="MEEST GEKOZEN">
+        <div class="pkg-icon">📦</div>
+        <div class="pkg-name" data-i18n="pkg_10s">10 Lessen Schakel</div>
+        <div class="pkg-lessons" data-i18n="pkg_10s_sub">10 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>800</div>
+        <div class="pkg-perlesson" data-i18n="pkg_10s_per">€50/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_10">10 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/8yi7sKiv32S4NZcJkjjYW" class="btn btn-primary pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">🎯</div>
+        <div class="pkg-name" data-i18n="pkg_20s">20 Lessen Schakel</div>
+        <div class="pkg-lessons" data-i18n="pkg_20s_sub">20 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>1.300</div>
+        <div class="pkg-perlesson" data-i18n="pkg_20s_per">€50/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_20">20 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+          <li data-i18n="pf_tvt">Tussentijdse toets (TVT)</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/9itESP6gUJov6hBwbPTwv" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">🚀</div>
+        <div class="pkg-name" data-i18n="pkg_30s">30 Lessen Schakel</div>
+        <div class="pkg-lessons" data-i18n="pkg_30s_sub">30 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>1.800</div>
+        <div class="pkg-perlesson" data-i18n="pkg_30s_per">€50/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_30">30 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+          <li data-i18n="pf_tvt">Tussentijdse toets (TVT)</li>
+          <li data-i18n="pf_exam_training">Examentraining</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/xKftLyr4LyMnFpMKYuh9v" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">👑</div>
+        <div class="pkg-name" data-i18n="pkg_40s">40 Lessen Schakel</div>
+        <div class="pkg-lessons" data-i18n="pkg_40s_sub">40 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>2.350</div>
+        <div class="pkg-perlesson" data-i18n="pkg_40s_per">€50/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_40">40 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+          <li data-i18n="pf_tvt">Tussentijdse toets (TVT)</li>
+          <li data-i18n="pf_exam_training">Examentraining</li>
+          <li data-i18n="pf_guarantee">Slagingsgarantie</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/jrTjArT4Y92uicV6NK5pm" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+    </div>
+
+    <!-- AUTOMAAT PANEL -->
+    <div class="pkg-grid pkg-panel" id="tab-automaat">
+      <div class="pkg-card proefles reveal">
+        <div class="pkg-icon">🆓</div>
+        <div class="pkg-name" data-i18n="pkg_proefles">Proefles</div>
+        <div class="pkg-lessons" data-i18n="pkg_proefles_sub">Maak kennis met Ajjan</div>
+        <div class="pkg-price"><sup>€</sup>0</div>
+        <div class="pkg-perlesson" data-i18n="pkg_free">Helemaal gratis!</div>
+        <ul class="pkg-features">
+          <li data-i18n="pf1">Kennismaking met de instructeur</li>
+          <li data-i18n="pf2">Beoordeling van jouw niveau</li>
+          <li data-i18n="pf3">Geen verplichtingen</li>
+        </ul>
+        <a href="#contact" class="btn btn-orange pkg-cta" data-i18n="pkg_book_free">Plan gratis proefles</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">⚡</div>
+        <div class="pkg-name" data-i18n="pkg_los_auto">Losse les automaat</div>
+        <div class="pkg-lessons" data-i18n="pkg_los_sub">Flexibel bijboken</div>
+        <div class="pkg-price"><sup>€</sup>65</div>
+        <div class="pkg-perlesson" data-i18n="perles">Per les (60 min)</div>
+        <ul class="pkg-features">
+          <li data-i18n="pf4">Inclusief voor- en nabespreking</li>
+          <li data-i18n="pf5">Moderne lesauto automaat</li>
+          <li data-i18n="pf6">Flexibele planning</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/6jYFjdqFtqAF3P5jHvVDU" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card featured reveal" data-label="MEEST GEKOZEN">
+        <div class="pkg-icon">📦</div>
+        <div class="pkg-name" data-i18n="pkg_10a">10 Lessen Automaat</div>
+        <div class="pkg-lessons" data-i18n="pkg_10a_sub">10 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>850</div>
+        <div class="pkg-perlesson" data-i18n="pkg_10a_per">€60/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_10">10 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/cwSEop8T792KFVNtvZExG" class="btn btn-primary pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">🎯</div>
+        <div class="pkg-name" data-i18n="pkg_20a">20 Lessen Automaat</div>
+        <div class="pkg-lessons" data-i18n="pkg_20a_sub">20 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>1.400</div>
+        <div class="pkg-perlesson" data-i18n="pkg_20a_per">€60/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_20">20 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+          <li data-i18n="pf_tvt">Tussentijdse toets (TVT)</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/rffbJmgaEREDgBimyKDay" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">🚀</div>
+        <div class="pkg-name" data-i18n="pkg_30a">30 Lessen Automaat</div>
+        <div class="pkg-lessons" data-i18n="pkg_30a_sub">30 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>1.950</div>
+        <div class="pkg-perlesson" data-i18n="pkg_30a_per">€60/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_30">30 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+          <li data-i18n="pf_tvt">Tussentijdse toets (TVT)</li>
+          <li data-i18n="pf_exam_training">Examentraining</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/h3dk8qQoNES65b2FAYGCW" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+      <div class="pkg-card reveal">
+        <div class="pkg-icon">👑</div>
+        <div class="pkg-name" data-i18n="pkg_40a">40 Lessen Automaat</div>
+        <div class="pkg-lessons" data-i18n="pkg_40a_sub">40 rijlessen · inclusief CBR examen</div>
+        <div class="pkg-price"><sup>€</sup>2.500</div>
+        <div class="pkg-perlesson" data-i18n="pkg_40a_per">€60/les · <span style="color:var(--blue)">inclusief examen</span></div>
+        <ul class="pkg-features">
+          <li data-i18n="pf_40">40 lessen van 60 minuten</li>
+          <li data-i18n="pf8">Voortgangsrapportage</li>
+          <li data-i18n="pf9">CBR examen begeleiding</li>
+          <li data-i18n="pf10">WhatsApp support</li>
+          <li data-i18n="pf_tvt">Tussentijdse toets (TVT)</li>
+          <li data-i18n="pf_exam_training">Examentraining</li>
+          <li data-i18n="pf_guarantee">Slagingsgarantie</li>
+        </ul>
+        <a href="https://payment-links.mollie.com/payment/NrxxUaugXiG9dDTqYoChw" class="btn btn-outline pkg-cta" target="_blank">💳 Koop nu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section style="background:white;padding:5rem 2rem" id="locaties">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:2.5rem">
+      <div class="section-label" data-i18n="loc_label">📍 Onze locaties</div>
+      <h2 class="section-title" data-i18n="loc_h2">Waar geven wij les?</h2>
+      <p class="section-sub" style="margin:0 auto" data-i18n="loc_sub">Ajjan rijschool is actief op twee CBR examenlocaties in Utrecht en Gorinchem.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem" class="reveal">
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(15,23,42,0.08);border:2px solid var(--border)">
+        <div style="background:var(--blue);color:white;padding:1rem 1.5rem;font-weight:700;font-size:1rem" data-i18n="loc_utrecht">📍 CBR Examencentrum Utrecht</div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.0!2d5.0913!3d52.0907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f4339d32d37%3A0x2b6e39c87d9f5b5f!2sCBR%20Utrecht!5e0!3m2!1snl!2snl!4v1"
+          width="100%" height="280" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(15,23,42,0.08);border:2px solid var(--border)">
+        <div style="background:var(--orange);color:white;padding:1rem 1.5rem;font-weight:700;font-size:1rem" data-i18n="loc_gorinchem">📍 CBR Examencentrum Schelluinen / Gorinchem</div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.0!2d4.9773!3d51.8697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c42c2c2c2c2c2c%3A0x2b6e39c87d9f5b5f!2sCBR%20Schelluinen!5e0!3m2!1snl!2snl!4v1"
+          width="100%" height="280" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem" class="reveal">
+      <a href="https://maps.google.com/?q=CBR+Examencentrum+Utrecht" target="_blank" class="btn btn-outline" style="justify-content:center" data-i18n="loc_maps_btn">🗺️ Open in Google Maps</a>
+      <a href="https://maps.google.com/?q=CBR+Examencentrum+Schelluinen" target="_blank" class="btn btn-outline" style="justify-content:center" data-i18n="loc_maps_btn">🗺️ Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-inner">
+    <div style="text-align:center" class="reveal">
+      <div class="section-label" data-i18n="how_label">Zo eenvoudig</div>
+      <h2 class="section-title" data-i18n="how_h2">In 3 stappen naar jouw rijbewijs</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div class="step-icon">📞</div>
+        <h3 data-i18n="step1_h">Neem contact op</h3>
+        <p data-i18n="step1_p">Bel, WhatsApp of vul het formulier in. Wij plannen snel een afspraak.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <div class="step-icon">🚗</div>
+        <h3 data-i18n="step2_h">Proefles gratis</h3>
+        <p data-i18n="step2_p">Maak kennis met Ajjan en de auto. Geen kosten, geen verplichtingen.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <div class="step-icon">🏆</div>
+        <h3 data-i18n="step3_h">Slagen voor het CBR</h3>
+        <p data-i18n="step3_p">Ajjan begeleidt je tot je geslaagd bent. Persoonlijk, geduldig en professioneel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label" data-i18n="why_label">Waarom Ajjan?</div>
+      <h2 class="section-title" data-i18n="why_h2">Rijles met een verschil</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="wc-icon">🌍</div><h3 data-i18n="why1_h">Meertalig</h3><p data-i18n="why1_p">Lessen in het Nederlands, Engels en Arabisch. Iedereen is welkom.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">💛</div><h3 data-i18n="why2_h">Persoonlijke aanpak</h3><p data-i18n="why2_p">Geen massaproductie. Jouw tempo, jouw leerstijl, jouw succes.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">📍</div><h3 data-i18n="why3_h">Twee locaties</h3><p data-i18n="why3_p">Beschikbaar in Utrecht én Gorinchem. Altijd dichtbij.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">💬</div><h3 data-i18n="why4_h">WhatsApp bereikbaar</h3><p data-i18n="why4_p">Snel antwoord via WhatsApp. Geen lange wachttijden.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">🔧</div><h3 data-i18n="why5_h">Schakel &amp; automaat</h3><p data-i18n="why5_p">Kies het type dat bij jou past. Beide opties beschikbaar.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">🎓</div><h3 data-i18n="why6_h">CBR erkend</h3><p data-i18n="why6_p">Gecertificeerde instructeur. Volledig erkend door het CBR.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-inner">
+    <div style="text-align:center" class="reveal">
+      <div class="section-label" data-i18n="rev_label">Reviews</div>
+      <h2 class="section-title" data-i18n="rev_h2">Wat zeggen onze leerlingen?</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="rev1_text">"Ajjan is een geweldige instructeur! Ze heeft heel veel geduld en legt alles duidelijk uit. Na 20 lessen ben ik in één keer geslaagd. Echt een aanrader!"</p>
+        <div class="review-author"><div class="review-avatar">F</div><div><div class="review-name">Fatima A.</div><div class="review-meta">Utrecht · Schakel</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="rev2_text">"Ik was heel nerveus maar Ajjan maakte me meteen op mijn gemak. De proefles was gratis en daarna heb ik direct een pakket geboekt. Super tevreden!"</p>
+        <div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Mohamed K.</div><div class="review-meta">Gorinchem · Automaat</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="rev3_text">"Eindelijk een rijschool waar je je echt thuis voelt. Ajjan spreekt ook Arabisch wat voor mij heel fijn was. Top instructeur, top prijs!"</p>
+        <div class="review-author"><div class="review-avatar">L</div><div><div class="review-name">Layla M.</div><div class="review-meta">Utrecht · Schakel</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING / CONTACT -->
+<section class="booking" id="contact">
+  <div class="section-inner booking-inner">
+    <div class="booking-grid">
+      <div class="booking-info reveal">
+        <div class="section-label" style="background:rgba(255,255,255,.15);color:white" data-i18n="book_label">Boek nu</div>
+        <h2 class="section-title" style="color:white" data-i18n="book_h2">Klaar om te beginnen?</h2>
+        <p data-i18n="book_p">Neem contact op via het formulier, WhatsApp of telefoon. We reageren snel en plannen jouw proefles gratis in!</p>
+        <ul class="contact-list">
+          <li><div class="cl-icon">📞</div><span><a href="tel:0640401174">06 40 40 11 74</a></span></li>
+          <li><div class="cl-icon">✉️</div><span><a href="mailto:Ajjanrijschool@gmail.com">Ajjanrijschool@gmail.com</a></span></li>
+          <li><div class="cl-icon">📍</div><span data-i18n="contact_loc">Utrecht &amp; Gorinchem</span></li>
+        </ul>
+        <div class="booking-wa">
+          <p data-i18n="wa_hint">Of stuur direct een WhatsApp bericht:</p>
+          <a href="https://wa.me/31640401174?text=Hallo%20Ajjan%2C%20ik%20wil%20graag%20een%20proefles%20boeken!" class="btn btn-whatsapp btn-lg" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <span data-i18n="wa_btn">WhatsApp Ajjan</span>
+          </a>
+        </div>
+      </div>
+      <div class="booking-form reveal">
+        <h3 data-i18n="form_h">Plan jouw rijles</h3>
+        <div id="formSuccess" class="success-msg">
+          <div class="sm-icon">🎉</div>
+          <h3 data-i18n="form_success_h">Aanvraag ontvangen!</h3>
+          <p data-i18n="form_success_p">We nemen zo snel mogelijk contact met je op. Tot snel!</p>
+        </div>
+        <form id="bookingForm" action="https://formspree.io/f/meebkyaz" method="POST" onsubmit="submitForm(event)">
+          <div style="display:none" aria-hidden="true">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form_name">Voornaam</label>
+              <input type="text" name="naam" placeholder="Jouw naam" required>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_phone">Telefoon / WhatsApp</label>
+              <input type="tel" name="telefoon" placeholder="06 xxxxxxxx" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_email">E-mailadres</label>
+            <input type="email" name="email" placeholder="jouw@email.nl">
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_pkg">Pakket interesse</label>
+            <select name="pakket">
+              <option data-i18n="form_pkg_default">Selecteer pakket...</option>
+              <option>Proefles (gratis)</option>
+              <option>Losse les Schakel — €55</option>
+              <option>Losse les Automaat — €65</option>
+              <option>10 Lessen Schakel — €800</option>
+              <option>20 Lessen Schakel — €1.300</option>
+              <option>30 Lessen Schakel — €1.800</option>
+              <option>40 Lessen Schakel — €2.350</option>
+              <option>10 Lessen Automaat — €850</option>
+              <option>20 Lessen Automaat — €1.400</option>
+              <option>30 Lessen Automaat — €1.950</option>
+              <option>40 Lessen Automaat — €2.500</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_msg">Bericht (optioneel)</label>
+            <textarea name="bericht" placeholder="Vragen of voorkeur voor tijdstip..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit btn-lg" data-i18n="form_submit">Verstuur aanvraag →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5zM7.5 14c-.83 0-1.5.67-1.5 1.5S6.67 17 7.5 17 9 16.33 9 15.5 8.33 14 7.5 14zm9 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg></div>
+        <div class="logo-text"><strong style="color:white">Ajjan Rijschool</strong><span>Utrecht &amp; Gorinchem</span></div>
+      </a>
+      <p data-i18n="footer_desc">Professionele rijlessen in Utrecht en Gorinchem. Schakel en automaat. Persoonlijke aanpak, meertalig, CBR erkend.</p>
+      <div class="social-row">
+        <a href="https://wa.me/31640401174" class="social-btn" title="WhatsApp" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <a href="mailto:Ajjanrijschool@gmail.com" class="social-btn" title="Email">✉️</a>
+        <a href="tel:0640401174" class="social-btn" title="Bel ons">📞</a>
+        <a href="https://www.tiktok.com/search?q=ajjan%20rijschool&t=1782739110279" class="social-btn" title="TikTok" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_pakketten">Pakketten</h4>
+      <ul>
+        <li><a href="#packages">Proefles (gratis)</a></li>
+        <li><a href="#packages">Schakel rijlessen</a></li>
+        <li><a href="#packages">Automaat rijlessen</a></li>
+        <li><a href="#packages">10, 20, 30, 40 lessen</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_info">Informatie</h4>
+      <ul>
+        <li><a href="#about" data-i18n="nav_about">Over ons</a></li>
+        <li><a href="#how" data-i18n="nav_how">Hoe werkt het?</a></li>
+        <li><a href="#reviews" data-i18n="nav_reviews">Reviews</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">Contact</h4>
+      <ul>
+        <li><a href="tel:0640401174">06 40 40 11 74</a></li>
+        <li><a href="mailto:Ajjanrijschool@gmail.com">Ajjanrijschool@gmail.com</a></li>
+        <li><a href="#contact">Utrecht</a></li>
+        <li><a href="#contact">Gorinchem</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ajjan Rijschool. Alle rechten voorbehouden.</span>
+    <span data-i18n="footer_cbr">CBR erkende rijschool · Utrecht &amp; Gorinchem</span>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:#0F172A;border-top:2px solid #1D4ED8;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+  <div style="color:rgba(255,255,255,.85);font-size:.88rem;max-width:700px;line-height:1.6;">
+    🍪 Wij gebruiken cookies om je ervaring te verbeteren en het formulier te laten werken. Door verder te gaan ga je akkoord met ons <a href="#" onclick="showPrivacy()" style="color:#93C5FD;text-decoration:underline">cookiebeleid</a>.
+  </div>
+  <div style="display:flex;gap:.75rem;flex-shrink:0;">
+    <button onclick="acceptCookies()" style="background:#1D4ED8;color:white;border:none;padding:10px 24px;border-radius:10px;font-weight:600;font-size:.88rem;cursor:pointer;font-family:inherit;">Accepteren</button>
+    <button onclick="rejectCookies()" style="background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);padding:10px 24px;border-radius:10px;font-weight:600;font-size:.88rem;cursor:pointer;font-family:inherit;">Alleen noodzakelijk</button>
+  </div>
+</div>
+
+<!-- PRIVACY MODAL -->
+<div id="privacyModal" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.6);align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:20px;padding:2.5rem;max-width:560px;width:90%;max-height:80vh;overflow-y:auto;position:relative;">
+    <button onclick="closePrivacy()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#64748B;">×</button>
+    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:1rem;color:#0F172A;">Privacybeleid & Cookiebeleid</h2>
+    <p style="font-size:.88rem;color:#64748B;line-height:1.7;margin-bottom:1rem;"><strong>Ajjan Rijschool</strong> · ajjanrijschool.nl · Ajjanrijschool@gmail.com</p>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;color:#0F172A;">Welke cookies gebruiken wij?</h3>
+    <p style="font-size:.88rem;color:#64748B;line-height:1.7;margin-bottom:1rem;">Wij gebruiken alleen functionele cookies die noodzakelijk zijn voor het werken van het contactformulier (Formspree) en betalingen (Mollie). Wij gebruiken geen tracking- of advertentiecookies.</p>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;color:#0F172A;">Welke gegevens verzamelen wij?</h3>
+    <p style="font-size:.88rem;color:#64748B;line-height:1.7;margin-bottom:1rem;">Via het contactformulier verzamelen wij: naam, telefoonnummer, e-mailadres en het gekozen pakket. Deze gegevens worden alleen gebruikt om contact met je op te nemen.</p>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;color:#0F172A;">Hoe lang bewaren wij je gegevens?</h3>
+    <p style="font-size:.88rem;color:#64748B;line-height:1.7;margin-bottom:1rem;">Wij bewaren je gegevens maximaal 1 jaar, tenzij je eerder verzoekt om verwijdering.</p>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;color:#0F172A;">Contact</h3>
+    <p style="font-size:.88rem;color:#64748B;line-height:1.7;margin-bottom:1.5rem;">Vragen? Mail ons op <a href="mailto:Ajjanrijschool@gmail.com" style="color:#1D4ED8;">Ajjanrijschool@gmail.com</a></p>
+    <button onclick="closePrivacy()" style="background:#1D4ED8;color:white;border:none;padding:10px 24px;border-radius:10px;font-weight:600;font-size:.88rem;cursor:pointer;font-family:inherit;">Sluiten</button>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<div class="wa-float">
+  <div class="wa-tooltip" data-i18n="wa_float_tip">Plan je proefles gratis!</div>
+  <a href="https://wa.me/31640401174?text=Hallo%20Ajjan%2C%20ik%20wil%20graag%20een%20proefles%20boeken!" class="wa-float-btn" target="_blank" title="WhatsApp Ajjan">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+<script>
+function acceptCookies(){document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookieConsent','accepted');}
+function rejectCookies(){document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookieConsent','rejected');}
+function showPrivacy(){document.getElementById('privacyModal').style.display='flex';}
+function closePrivacy(){document.getElementById('privacyModal').style.display='none';}
+if(!localStorage.getItem('cookieConsent')){document.getElementById('cookieBanner').style.display='flex';}
+
+const i18n = {
+  nl:{nav_packages:'Pakketten',nav_how:'Hoe werkt het?',nav_about:'Over ons',nav_reviews:'Reviews',nav_contact:'Contact',nav_book:'Boek nu',hero_badge:'✓ Proefles gratis · Utrecht & Gorinchem',hero_h1:'Rij je <em>rijbewijs</em> met vertrouwen',hero_sub:'Persoonlijke rijlessen op maat. Schakel of automaat. Van proefles tot slagingsgarantie — Ajjan begeleidt je stap voor stap.',hero_cta1:'📅 Plan je proefles',hero_cta2:'Bekijk pakketten →',stat1:'Persoonlijke aandacht',stat2:'Proefles',stat3:'Locaties',fc1a:'Schakel rijles',fc2a:'Proefles',fc2b:'Gratis!',fc3a:'Geslaagd',trust1:'Utrecht & Gorinchem',trust2:'CBR erkend rijschool',trust3:'Proefles gratis',trust4:'WhatsApp bereikbaar',trust5:'Schakel & automaat',story_label:'Ons verhaal',story_h2_safe:'Van strijd naar succes — jouw rij-instructeur',story_p1:'Ajjan vluchtte uit Syrië tijdens de oorlog. Ze bouwde haar leven opnieuw op in Nederland — met doorzettingsvermogen, moed en de droom om mensen te helpen. Vandaag is ze een gecertificeerde rijinstructeur die haar passie elke dag deelt.',story_quote:'"Ik weet wat het betekent om opnieuw te beginnen. Ik help jou om rijden te leren met geduld, warmte en professionaliteit."',story_p2:'Bij Ajjan Rijschool krijg je geen nummertje. Je krijgt een instructeur die écht om jou geeft, die jouw tempo begrijpt en die jou klaarstoomt voor het CBR examen.',sp1:'Gecertificeerd rijinstructeur (CBR erkend)',sp2:'Lessen in het Nederlands, Engels & Arabisch',sp3:'Persoonlijke aanpak — jouw tempo, jouw leerstijl',sp4:'Beschikbaar in Utrecht en Gorinchem',story_cta:'Maak een afspraak →',story_badge:'Van Syrië naar jouw rijbewijs',story_flag:'Utrecht & Gorinchem',pkg_label:'Rijlespakketten',pkg_h2:'Kies jouw pakket',pkg_sub:'Van losse lessen tot complete pakketten. Schakel of automaat — kies wat bij jou past.',tab_schakel:'🔧 Schakel',tab_automaat:'⚡ Automaat',pkg_proefles:'Proefles',pkg_proefles_sub:'Maak kennis met Ajjan',pkg_free:'Helemaal gratis!',pkg_los:'Losse rijles',pkg_los_sub:'Flexibel bijboken',pkg_los_auto:'Losse les automaat',pkg_10_sub:'10 rijlessen · beste start',pkg_20_sub:'20 rijlessen · meest populair',perles:'Per les (60 min)',pf1:'Kennismaking met de instructeur',pf2:'Beoordeling van jouw niveau',pf3:'Geen verplichtingen',pf4:'Inclusief voor- en nabespreking',pf5:'Moderne lesauto',pf6:'Flexibele planning',pf8:'Voortgangsrapportage',pf9:'CBR examen begeleiding',pf10:'WhatsApp support',pkg_book_free:'Plan gratis proefles',pkg_book:'Boek pakket',pkg_10s:'10 Lessen Schakel',pkg_10s_sub:'10 rijlessen · inclusief CBR examen',pkg_10s_per:'€50/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_20s:'20 Lessen Schakel',pkg_20s_sub:'20 rijlessen · inclusief CBR examen',pkg_20s_per:'€50/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_30s:'30 Lessen Schakel',pkg_30s_sub:'30 rijlessen · inclusief CBR examen',pkg_30s_per:'€50/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_40s:'40 Lessen Schakel',pkg_40s_sub:'40 rijlessen · inclusief CBR examen',pkg_40s_per:'€50/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_10a:'10 Lessen Automaat',pkg_10a_sub:'10 rijlessen · inclusief CBR examen',pkg_10a_per:'€60/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_20a:'20 Lessen Automaat',pkg_20a_sub:'20 rijlessen · inclusief CBR examen',pkg_20a_per:'€60/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_30a:'30 Lessen Automaat',pkg_30a_sub:'30 rijlessen · inclusief CBR examen',pkg_30a_per:'€60/les · <span style="color:var(--blue)">inclusief examen</span>',pkg_40a:'40 Lessen Automaat',pkg_40a_sub:'40 rijlessen · inclusief CBR examen',pkg_40a_per:'€60/les · <span style="color:var(--blue)">inclusief examen</span>',pf_10:'10 lessen van 60 minuten',pf_20:'20 lessen van 60 minuten',pf_30:'30 lessen van 60 minuten',pf_40:'40 lessen van 60 minuten',pf_tvt:'Tussentijdse toets (TVT)',pf_exam_training:'Examentraining',pf_guarantee:'Slagingsgarantie',how_label:'Zo eenvoudig',how_h2:'In 3 stappen naar jouw rijbewijs',step1_h:'Neem contact op',step1_p:'Bel, WhatsApp of vul het formulier in. Wij plannen snel een afspraak.',step2_h:'Proefles gratis',step2_p:'Maak kennis met Ajjan en de auto. Geen kosten, geen verplichtingen.',step3_h:'Slagen voor het CBR',step3_p:'Ajjan begeleidt je tot je geslaagd bent. Persoonlijk, geduldig en professioneel.',why_label:'Waarom Ajjan?',why_h2:'Rijles met een verschil',why1_h:'Meertalig',why1_p:'Lessen in het Nederlands, Engels en Arabisch. Iedereen is welkom.',why2_h:'Persoonlijke aanpak',why2_p:'Geen massaproductie. Jouw tempo, jouw leerstijl, jouw succes.',why3_h:'Twee locaties',why3_p:'Beschikbaar in Utrecht én Gorinchem. Altijd dichtbij.',why4_h:'WhatsApp bereikbaar',why4_p:'Snel antwoord via WhatsApp. Geen lange wachttijden.',why5_h:'Schakel & automaat',why5_p:'Kies het type dat bij jou past. Beide opties beschikbaar.',why6_h:'CBR erkend',why6_p:'Gecertificeerde instructeur. Volledig erkend door het CBR.',rev_label:'Reviews',rev_h2:'Wat zeggen onze leerlingen?',rev1_text:'"Ajjan is een geweldige instructeur! Ze heeft heel veel geduld en legt alles duidelijk uit. Na 20 lessen ben ik in één keer geslaagd. Echt een aanrader!"',rev2_text:'"Ik was heel nerveus maar Ajjan maakte me meteen op mijn gemak. De proefles was gratis en daarna heb ik direct een pakket geboekt. Super tevreden!"',rev3_text:'"Eindelijk een rijschool waar je je echt thuis voelt. Ajjan spreekt ook Arabisch wat voor mij heel fijn was. Top instructeur, top prijs!"',book_label:'Boek nu',book_h2:'Klaar om te beginnen?',book_p:'Neem contact op via het formulier, WhatsApp of telefoon. We reageren snel en plannen jouw proefles gratis in!',contact_loc:'Utrecht & Gorinchem',wa_hint:'Of stuur direct een WhatsApp bericht:',wa_btn:'WhatsApp Ajjan',form_h:'Plan jouw rijles',form_name:'Voornaam',form_phone:'Telefoon / WhatsApp',form_email:'E-mailadres',form_pkg:'Pakket interesse',form_pkg_default:'Selecteer pakket...',form_msg:'Bericht (optioneel)',form_submit:'Verstuur aanvraag →',form_success_h:'Aanvraag ontvangen!',form_success_p:'We nemen zo snel mogelijk contact met je op. Tot snel!',footer_desc:'Professionele rijlessen in Utrecht en Gorinchem. Schakel en automaat. Persoonlijke aanpak, meertalig, CBR erkend.',footer_pakketten:'Pakketten',footer_info:'Informatie',footer_contact:'Contact',footer_cbr:'CBR erkende rijschool · Utrecht & Gorinchem',wa_float_tip:'Plan je proefles gratis!',loc_label:'📍 Onze locaties',loc_h2:'Waar geven wij les?',loc_sub:'Ajjan rijschool is actief op twee CBR examenlocaties in Utrecht en Gorinchem.',loc_utrecht:'📍 CBR Examencentrum Utrecht',loc_gorinchem:'📍 CBR Examencentrum Schelluinen / Gorinchem',loc_maps_btn:'🗺️ Open in Google Maps'},
+  en:{nav_packages:'Packages',nav_how:'How it works',nav_about:'About us',nav_reviews:'Reviews',nav_contact:'Contact',nav_book:'Book now',hero_badge:'✓ Free trial lesson · Utrecht & Gorinchem',hero_h1:'Get your <em>driving licence</em> with confidence',hero_sub:'Personal driving lessons tailored to you. Manual or automatic. From trial lesson to passing your exam — Ajjan guides you every step of the way.',hero_cta1:'📅 Plan your trial lesson',hero_cta2:'View packages →',stat1:'Personal attention',stat2:'Trial lesson',stat3:'Locations',fc1a:'Manual lesson',fc2a:'Trial lesson',fc2b:'Free!',fc3a:'Passed!',trust1:'Utrecht & Gorinchem',trust2:'CBR certified driving school',trust3:'Free trial lesson',trust4:'WhatsApp available',trust5:'Manual & automatic',story_label:'Our story',story_h2_safe:'From struggle to success — your driving instructor',story_p1:'Ajjan fled Syria during the war. She rebuilt her life in the Netherlands — with perseverance, courage and a dream to help others. Today she is a certified driving instructor who shares her passion every day.',story_quote:'"I know what it means to start over. I help you learn to drive with patience, warmth and professionalism."',story_p2:'At Ajjan Rijschool you are not just a number. You get an instructor who truly cares about you, understands your pace and prepares you for your CBR exam.',sp1:'Certified driving instructor (CBR recognised)',sp2:'Lessons in Dutch, English & Arabic',sp3:'Personal approach — your pace, your learning style',sp4:'Available in Utrecht and Gorinchem',story_cta:'Make an appointment →',story_badge:'From Syria to your driving licence',story_flag:'Utrecht & Gorinchem',pkg_label:'Driving packages',pkg_h2:'Choose your package',pkg_sub:'From single lessons to complete packages. Manual or automatic — choose what suits you.',tab_schakel:'🔧 Manual',tab_automaat:'⚡ Automatic',pkg_proefles:'Trial lesson',pkg_proefles_sub:'Meet Ajjan',pkg_free:'Completely free!',pkg_los:'Single lesson',pkg_los_sub:'Book flexibly',pkg_los_auto:'Single lesson automatic',pkg_10_sub:'10 lessons · best start',pkg_20_sub:'20 lessons · most popular',perles:'Per lesson (60 min)',pf1:'Meet the instructor',pf2:'Assessment of your level',pf3:'No obligations',pf4:'Includes pre and post discussion',pf5:'Modern lesson car',pf6:'Flexible scheduling',pf8:'Progress reports',pf9:'CBR exam guidance',pf10:'WhatsApp support',pkg_book_free:'Plan free trial lesson',pkg_book:'Book package',pkg_10s:'10 Manual Lessons',pkg_10s_sub:'10 lessons · including CBR exam',pkg_10s_per:'€50/lesson · <span style="color:var(--blue)">including exam</span>',pkg_20s:'20 Manual Lessons',pkg_20s_sub:'20 lessons · including CBR exam',pkg_20s_per:'€50/lesson · <span style="color:var(--blue)">including exam</span>',pkg_30s:'30 Manual Lessons',pkg_30s_sub:'30 lessons · including CBR exam',pkg_30s_per:'€50/lesson · <span style="color:var(--blue)">including exam</span>',pkg_40s:'40 Manual Lessons',pkg_40s_sub:'40 lessons · including CBR exam',pkg_40s_per:'€50/lesson · <span style="color:var(--blue)">including exam</span>',pkg_10a:'10 Automatic Lessons',pkg_10a_sub:'10 lessons · including CBR exam',pkg_10a_per:'€60/lesson · <span style="color:var(--blue)">including exam</span>',pkg_20a:'20 Automatic Lessons',pkg_20a_sub:'20 lessons · including CBR exam',pkg_20a_per:'€60/lesson · <span style="color:var(--blue)">including exam</span>',pkg_30a:'30 Automatic Lessons',pkg_30a_sub:'30 lessons · including CBR exam',pkg_30a_per:'€60/lesson · <span style="color:var(--blue)">including exam</span>',pkg_40a:'40 Automatic Lessons',pkg_40a_sub:'40 lessons · including CBR exam',pkg_40a_per:'€60/lesson · <span style="color:var(--blue)">including exam</span>',pf_10:'10 lessons of 60 minutes',pf_20:'20 lessons of 60 minutes',pf_30:'30 lessons of 60 minutes',pf_40:'40 lessons of 60 minutes',pf_tvt:'Interim driving test (TVT)',pf_exam_training:'Exam training',pf_guarantee:'Pass guarantee',how_label:'Simple as that',how_h2:'3 steps to your driving licence',step1_h:'Get in touch',step1_p:'Call, WhatsApp or fill out the form. We plan an appointment quickly.',step2_h:'Free trial lesson',step2_p:'Meet Ajjan and the car. No cost, no obligations.',step3_h:'Pass your CBR exam',step3_p:'Ajjan guides you until you pass. Personal, patient and professional.',why_label:'Why Ajjan?',why_h2:'Driving lessons with a difference',why1_h:'Multilingual',why1_p:'Lessons in Dutch, English and Arabic. Everyone is welcome.',why2_h:'Personal approach',why2_p:'No mass production. Your pace, your learning style, your success.',why3_h:'Two locations',why3_p:'Available in Utrecht and Gorinchem. Always nearby.',why4_h:'WhatsApp available',why4_p:'Quick response via WhatsApp. No long wait times.',why5_h:'Manual & automatic',why5_p:'Choose the type that suits you. Both options available.',why6_h:'CBR certified',why6_p:'Certified instructor. Fully recognised by the CBR.',rev_label:'Reviews',rev_h2:'What do our students say?',rev1_text:'"Ajjan is a wonderful instructor! She has so much patience and explains everything clearly. After 20 lessons I passed first time. Highly recommended!"',rev2_text:'"I was very nervous but Ajjan made me feel at ease immediately. The trial lesson was free and I booked a package straight after. Very happy!"',rev3_text:'"Finally a driving school where you feel truly at home. Ajjan also speaks Arabic which was so helpful for me. Top instructor, great price!"',book_label:'Book now',book_h2:'Ready to start?',book_p:'Contact us via the form, WhatsApp or phone. We respond quickly and schedule your free trial lesson!',contact_loc:'Utrecht & Gorinchem',wa_hint:'Or send a WhatsApp message directly:',wa_btn:'WhatsApp Ajjan',form_h:'Plan your driving lesson',form_name:'First name',form_phone:'Phone / WhatsApp',form_email:'Email address',form_pkg:'Package interest',form_pkg_default:'Select package...',form_msg:'Message (optional)',form_submit:'Send request →',form_success_h:'Request received!',form_success_p:'We will contact you as soon as possible. See you soon!',footer_desc:'Professional driving lessons in Utrecht and Gorinchem. Manual and automatic. Personal approach, multilingual, CBR certified.',footer_pakketten:'Packages',footer_info:'Information',footer_contact:'Contact',footer_cbr:'CBR certified driving school · Utrecht & Gorinchem',wa_float_tip:'Plan your free trial lesson!',loc_label:'📍 Our locations',loc_h2:'Where do we give lessons?',loc_sub:'Ajjan rijschool is active at two CBR exam locations in Utrecht and Gorinchem.',loc_utrecht:'📍 CBR Exam Centre Utrecht',loc_gorinchem:'📍 CBR Exam Centre Schelluinen / Gorinchem',loc_maps_btn:'🗺️ Open in Google Maps'},
+  ar:{nav_packages:'الباقات',nav_how:'كيف يعمل؟',nav_about:'من نحن',nav_reviews:'آراء العملاء',nav_contact:'تواصل',nav_book:'احجز الآن',hero_badge:'✓ درس تجريبي مجاني · أوتريخت وغورينخم',hero_h1:'احصل على <em>رخصة قيادتك</em> بثقة',hero_sub:'دروس قيادة شخصية مخصصة لك. يدوي أو أوتوماتيك. من الدرس التجريبي حتى الاجتياز — عجان ترشدك خطوة بخطوة.',hero_cta1:'📅 احجز درسك التجريبي',hero_cta2:'عرض الباقات ←',stat1:'اهتمام شخصي',stat2:'درس تجريبي',stat3:'مواقع',fc1a:'درس يدوي',fc2a:'درس تجريبي',fc2b:'مجاني!',fc3a:'نجحت!',trust1:'أوتريخت وغورينخم',trust2:'مدرسة قيادة معتمدة CBR',trust3:'درس تجريبي مجاني',trust4:'متاح على واتساب',trust5:'يدوي وأوتوماتيك',story_label:'قصتنا',story_h2_safe:'من الكفاح إلى النجاح — مدربتك في القيادة',story_p1:'فرّت عجان من سوريا خلال الحرب. أعادت بناء حياتها في هولندا بإصرار وشجاعة وحلم مساعدة الآخرين. اليوم هي مدربة قيادة معتمدة تشارك شغفها كل يوم.',story_quote:'"أعرف ما يعنيه البدء من جديد. أساعدك على تعلم القيادة بصبر ودفء واحترافية."',story_p2:'في مدرسة عجان لتعليم القيادة لست مجرد رقم. ستحصل على مدربة تهتم بك حقاً وتفهم إيقاعك وتعدّك لاجتياز امتحان CBR.',sp1:'مدربة قيادة معتمدة (معترف بها من CBR)',sp2:'دروس بالهولندية والإنجليزية والعربية',sp3:'نهج شخصي — وتيرتك وأسلوب تعلمك',sp4:'متاحة في أوتريخت وغورينخم',story_cta:'احجز موعداً ←',story_badge:'من سوريا إلى رخصة قيادتك',story_flag:'أوتريخت وغورينخم',pkg_label:'باقات القيادة',pkg_h2:'اختر باقتك',pkg_sub:'من دروس فردية إلى باقات كاملة. يدوي أو أوتوماتيك — اختر ما يناسبك.',tab_schakel:'🔧 يدوي',tab_automaat:'⚡ أوتوماتيك',pkg_proefles:'درس تجريبي',pkg_proefles_sub:'تعرف على عجان',pkg_free:'مجاني تماماً!',pkg_los:'درس منفرد',pkg_los_sub:'احجز بمرونة',pkg_los_auto:'درس منفرد أوتوماتيك',pkg_10_sub:'١٠ دروس · بداية مثالية',pkg_20_sub:'٢٠ درساً · الأكثر شعبية',perles:'لكل درس (٦٠ دقيقة)',pf1:'التعرف على المدربة',pf2:'تقييم مستواك',pf3:'بدون التزامات',pf4:'يشمل نقاشاً قبل وبعد الدرس',pf5:'سيارة تعليم حديثة',pf6:'جدول مرن',pf8:'تقارير تقدم',pf9:'إرشاد لامتحان CBR',pf10:'دعم عبر واتساب',pkg_book_free:'احجز درساً تجريبياً مجانياً',pkg_book:'احجز الباقة',pkg_10s:'١٠ دروس يدوي',pkg_10s_sub:'١٠ دروس · شامل امتحان CBR',pkg_10s_per:'€50/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_20s:'٢٠ درساً يدوي',pkg_20s_sub:'٢٠ درساً · شامل امتحان CBR',pkg_20s_per:'€50/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_30s:'٣٠ درساً يدوي',pkg_30s_sub:'٣٠ درساً · شامل امتحان CBR',pkg_30s_per:'€50/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_40s:'٤٠ درساً يدوي',pkg_40s_sub:'٤٠ درساً · شامل امتحان CBR',pkg_40s_per:'€50/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_10a:'١٠ دروس أوتوماتيك',pkg_10a_sub:'١٠ دروس · شامل امتحان CBR',pkg_10a_per:'€60/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_20a:'٢٠ درساً أوتوماتيك',pkg_20a_sub:'٢٠ درساً · شامل امتحان CBR',pkg_20a_per:'€60/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_30a:'٣٠ درساً أوتوماتيك',pkg_30a_sub:'٣٠ درساً · شامل امتحان CBR',pkg_30a_per:'€60/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pkg_40a:'٤٠ درساً أوتوماتيك',pkg_40a_sub:'٤٠ درساً · شامل امتحان CBR',pkg_40a_per:'€60/درس · <span style="color:var(--blue)">شامل الامتحان</span>',pf_10:'١٠ دروس من ٦٠ دقيقة',pf_20:'٢٠ درساً من ٦٠ دقيقة',pf_30:'٣٠ درساً من ٦٠ دقيقة',pf_40:'٤٠ درساً من ٦٠ دقيقة',pf_tvt:'اختبار منتصف المدة (TVT)',pf_exam_training:'تدريب على الامتحان',pf_guarantee:'ضمان النجاح',how_label:'بسيط جداً',how_h2:'٣ خطوات للحصول على رخصتك',step1_h:'تواصل معنا',step1_p:'اتصل أو أرسل واتساب أو املأ النموذج. سنحدد موعداً سريعاً.',step2_h:'درس تجريبي مجاني',step2_p:'تعرف على عجان والسيارة. بدون تكلفة وبدون التزامات.',step3_h:'اجتز امتحان CBR',step3_p:'عجان ترشدك حتى تنجح. شخصي وصبور ومهني.',why_label:'لماذا عجان؟',why_h2:'دروس قيادة بفرق',why1_h:'متعددة اللغات',why1_p:'دروس بالهولندية والإنجليزية والعربية. الجميع مرحب به.',why2_h:'نهج شخصي',why2_p:'لا تعليم جماعي. وتيرتك وأسلوبك ونجاحك.',why3_h:'موقعان',why3_p:'متاحة في أوتريخت وغورينخم. دائماً قريبة.',why4_h:'واتساب متاح',why4_p:'ردود سريعة عبر واتساب. بدون انتظار طويل.',why5_h:'يدوي وأوتوماتيك',why5_p:'اختر النوع الذي يناسبك. كلا الخيارين متاح.',why6_h:'معتمدة من CBR',why6_p:'مدربة معتمدة. معترف بها بالكامل من قِبل CBR.',rev_label:'آراء العملاء',rev_h2:'ماذا يقول طلابنا؟',rev1_text:'"عجان مدربة رائعة! لديها صبر كبير وتشرح كل شيء بوضوح. بعد ٢٠ درساً نجحت من أول مرة. أنصح بها بشدة!"',rev2_text:'"كنت خائفاً جداً لكن عجان جعلتني أشعر بالراحة فوراً. الدرس التجريبي كان مجانياً واشتريت باقة مباشرة. سعيد جداً!"',rev3_text:'"أخيراً مدرسة قيادة أشعر فيها بالبيت. عجان تتكلم العربية أيضاً وكان هذا رائعاً. مدربة ممتازة وسعر مناسب!"',book_label:'احجز الآن',book_h2:'مستعد للبدء؟',book_p:'تواصل معنا عبر النموذج أو واتساب أو الهاتف. نرد بسرعة ونحجز درسك التجريبي المجاني!',contact_loc:'أوتريخت وغورينخم',wa_hint:'أو أرسل رسالة واتساب مباشرة:',wa_btn:'واتساب عجان',form_h:'احجز درسك',form_name:'الاسم الأول',form_phone:'الهاتف / واتساب',form_email:'البريد الإلكتروني',form_pkg:'اهتمامك بالباقة',form_pkg_default:'اختر باقة...',form_msg:'رسالة (اختيارية)',form_submit:'إرسال الطلب ←',form_success_h:'تم استلام طلبك!',form_success_p:'سنتصل بك في أقرب وقت ممكن. إلى اللقاء!',footer_desc:'دروس قيادة احترافية في أوتريخت وغورينخم. يدوي وأوتوماتيك. نهج شخصي، متعدد اللغات، معتمد من CBR.',footer_pakketten:'الباقات',footer_info:'معلومات',footer_contact:'تواصل',footer_cbr:'مدرسة قيادة معتمدة CBR · أوتريخت وغورينخم',wa_float_tip:'احجز درسك التجريبي مجاناً!',loc_label:'📍 مواقعنا',loc_h2:'أين نعطي الدروس؟',loc_sub:'مدرسة عجان للقيادة نشطة في موقعي CBR في أوتريخت وغورينخم.',loc_utrecht:'📍 مركز امتحان CBR أوتريخت',loc_gorinchem:'📍 مركز امتحان CBR سخيلويينن / غورينخم',loc_maps_btn:'🗺️ فتح في خرائط Google'}
+};
+
+let currentLang='nl';
+function setLang(lang){
+  currentLang=lang;
+  document.documentElement.setAttribute('lang',lang);
+  document.documentElement.setAttribute('dir',lang==='ar'?'rtl':'ltr');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  const t=i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(t[k]!==undefined) el.innerHTML=t[k];
+  });
+  const lbl=lang==='nl'?'MEEST GEKOZEN':lang==='en'?'MOST POPULAR':'الأكثر شعبية';
+  document.querySelectorAll('.pkg-card.featured').forEach(c=>c.setAttribute('data-label',lbl));
+}
+
+function switchTab(tab){
+  document.querySelectorAll('.pkg-tab').forEach((b,i)=>{
+    b.classList.toggle('active',(i===0&&tab==='schakel')||(i===1&&tab==='automaat'));
+  });
+  document.querySelectorAll('.pkg-panel').forEach(p=>{
+    p.classList.toggle('active',p.id===`tab-${tab}`);
+  });
+}
+
+function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');}
+
+async function submitForm(e){
+  e.preventDefault();
+  const form=document.getElementById('bookingForm');
+  const data=new FormData(form);
+  const res=await fetch('https://formspree.io/f/meebkyaz',{method:'POST',body:data,headers:{Accept:'application/json'}});
+  if(res.ok){
+    form.style.display='none';
+    document.getElementById('formSuccess').classList.add('show');
+  } else {
+    alert('Er is iets misgegaan. Probeer het opnieuw of bel ons.');
+  }
+}
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').style.boxShadow=window.scrollY>20?'0 4px 24px rgba(0,0,0,.08)':'none';
+});
+
+document.addEventListener('click',e=>{
+  const nav=document.getElementById('mobileNav');
+  if(nav.classList.contains('open')&&!nav.contains(e.target)&&!e.target.closest('.hamburger'))
+    nav.classList.remove('open');
+});
+</script>
+</body>
+</html>
