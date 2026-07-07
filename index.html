@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajjan Rijschool – Rijlessen Utrecht & Gorinchem | Schakel & Automaat</title>
+  <title>Ajjan Rijschool – Utrecht & Gorinchem | Rijlessen</title>
   <meta name="description" content="Ajjan Rijschool biedt professionele rijlessen in Utrecht en Gorinchem. Schakel en automaat. Gratis proefles, CBR erkend, meertalig (NL/EN/AR). Boek nu!">
   <meta name="keywords" content="rijschool Utrecht, rijschool Gorinchem, rijlessen Utrecht, rijbewijs halen, schakel rijles, automaat rijles, CBR erkend, rijschool Ajjan">
   <meta name="author" content="Ajjan Rijschool">
@@ -952,6 +952,8 @@ async function submitForm(e){
     alert('Je hebt al een aanvraag verstuurd. Probeer het over '+mins+' minuut(en) opnieuw.');
     return;
   }
+  const btn=document.querySelector('#bookingForm button[type="submit"]');
+  if(btn) { btn.disabled=true; btn.textContent='Versturen...'; }
   const form=document.getElementById('bookingForm');
   const data=new FormData(form);
   const res=await fetch('https://formspree.io/f/meebkyaz',{method:'POST',body:data,headers:{Accept:'application/json'}});
@@ -960,6 +962,7 @@ async function submitForm(e){
     form.style.display='none';
     document.getElementById('formSuccess').classList.add('show');
   } else {
+    if(btn) { btn.disabled=false; btn.textContent='Verstuur aanvraag →'; }
     alert('Er is iets misgegaan. Probeer het opnieuw of bel ons.');
   }
 }
