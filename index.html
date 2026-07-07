@@ -943,8 +943,10 @@ function switchTab(tab){
 
 function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');}
 
+let _formBusy=false;
 async function submitForm(e){
   e.preventDefault();
+  if(_formBusy) return;
   const cooldown=5*60*1000;
   const last=localStorage.getItem('formLastSubmit');
   if(last && Date.now()-parseInt(last)<cooldown){
@@ -952,8 +954,9 @@ async function submitForm(e){
     alert('Je hebt al een aanvraag verstuurd. Probeer het over '+mins+' minuut(en) opnieuw.');
     return;
   }
+  _formBusy=true;
   const btn=document.querySelector('#bookingForm button[type="submit"]');
-  if(btn) { btn.disabled=true; btn.textContent='Versturen...'; }
+  if(btn){btn.disabled=true;btn.textContent='Versturen...';}
   const form=document.getElementById('bookingForm');
   const data=new FormData(form);
   const res=await fetch('https://formspree.io/f/meebkyaz',{method:'POST',body:data,headers:{Accept:'application/json'}});
@@ -962,7 +965,8 @@ async function submitForm(e){
     form.style.display='none';
     document.getElementById('formSuccess').classList.add('show');
   } else {
-    if(btn) { btn.disabled=false; btn.textContent='Verstuur aanvraag →'; }
+    _formBusy=false;
+    if(btn){btn.disabled=false;btn.textContent='Verstuur aanvraag →';}
     alert('Er is iets misgegaan. Probeer het opnieuw of bel ons.');
   }
 }
