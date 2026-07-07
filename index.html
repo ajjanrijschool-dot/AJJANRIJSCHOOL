@@ -745,7 +745,7 @@
           <h3 data-i18n="form_success_h">Aanvraag ontvangen!</h3>
           <p data-i18n="form_success_p">We nemen zo snel mogelijk contact met je op. Tot snel!</p>
         </div>
-        <form id="bookingForm" action="https://formspree.io/f/meebkyaz" method="POST" onsubmit="submitForm(event)">
+        <form id="bookingForm" action="https://formspree.io/f/feebkyaz" method="POST" onsubmit="submitForm(event)">
           <div style="display:none" aria-hidden="true">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
@@ -926,7 +926,7 @@ async function submitForm(e){
   e.preventDefault();
   const form=document.getElementById('bookingForm');
   const data=new FormData(form);
-  const res=await fetch('https://formspree.io/f/meebkyaz',{method:'POST',body:data,headers:{Accept:'application/json'}});
+  const res=await fetch('https://formspree.io/f/feebkyaz',{method:'POST',body:data,headers:{Accept:'application/json'}});
   if(res.ok){
     form.style.display='none';
     document.getElementById('formSuccess').classList.add('show');
