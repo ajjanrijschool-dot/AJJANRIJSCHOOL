@@ -621,7 +621,7 @@
       <p class="section-sub" data-i18n="gsl_sub">Elke geslaagde is een feestje. Gefeliciteerd aan al onze leerlingen!</p>
     </div>
     <div style="position:relative;" class="reveal">
-      <div id="gslCarousel" style="display:flex;gap:16px;overflow:hidden;scroll-behavior:smooth;">
+      <div id="gslCarousel" style="display:flex;gap:16px;overflow:hidden;scroll-behavior:smooth;transition:scroll-left 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd1.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd2.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd3.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
@@ -641,11 +641,17 @@
 <script>
 (function(){
   const c=document.getElementById('gslCarousel');
-  let idx=0;const total=10;const visible=window.innerWidth<600?1:window.innerWidth<900?2:5;
-  function scrollTo(i){idx=((i%total)+total)%total;c.scrollLeft=idx*(c.scrollWidth/total);}
-  window.gslNext=function(){scrollTo(idx+1);};
-  window.gslPrev=function(){scrollTo(idx-1);};
-  setInterval(function(){scrollTo(idx+1);},3500);
+  let idx=0;const total=10;
+  function getItemWidth(){return c.scrollWidth/total;}
+  function slideTo(i){
+    idx=((i%total)+total)%total;
+    c.style.scrollBehavior='smooth';
+    c.scrollLeft=idx*getItemWidth();
+  }
+  window.gslNext=function(){slideTo(idx+1);};
+  window.gslPrev=function(){slideTo(idx-1);};
+  c.style.scrollBehavior='smooth';
+  setInterval(function(){slideTo(idx+1);},4000);
 })();
 </script>
 
