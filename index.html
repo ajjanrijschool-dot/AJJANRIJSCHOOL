@@ -657,32 +657,35 @@
 (function(){
   const track=document.getElementById('gslTrack');
   const total=25;
-  let idx=0;
+  const vis=5;
+  const all=Array.from(track.children);
+  all.slice(-vis).forEach(function(el){track.insertBefore(el.cloneNode(true),track.firstChild);});
+  all.slice(0,vis).forEach(function(el){track.appendChild(el.cloneNode(true));});
+  let pos=vis;
   let animating=false;
-  function getStep(){
-    const item=track.children[0];
-    const gap=16;
-    return item.getBoundingClientRect().width+gap;
-  }
-  function jumpTo(i){
+  function getStep(){return track.children[0].getBoundingClientRect().width+16;}
+  function jumpTo(p){
     track.style.transition='none';
-    track.style.transform='translateX(-'+(i*getStep())+'px)';
+    track.style.transform='translateX(-'+(p*getStep())+'px)';
     track.offsetHeight;
     track.style.transition='transform 0.7s cubic-bezier(0.4,0,0.2,1)';
+    pos=p;
   }
-  function slideTo(i){
+  function slideTo(p){
     if(animating)return;
     animating=true;
-    idx=((i%total)+total)%total;
-    track.style.transform='translateX(-'+(idx*getStep())+'px)';
+    pos=p;
+    track.style.transform='translateX(-'+(pos*getStep())+'px)';
     setTimeout(function(){
-      if(idx===0) jumpTo(0);
+      if(pos>=total+vis)jumpTo(vis);
+      else if(pos<vis)jumpTo(total);
       animating=false;
     },750);
   }
-  window.gslNext=function(){slideTo(idx+1);};
-  window.gslPrev=function(){slideTo(idx-1);};
-  setInterval(function(){slideTo(idx+1);},4000);
+  jumpTo(vis);
+  window.gslNext=function(){slideTo(pos+1);};
+  window.gslPrev=function(){slideTo(pos-1);};
+  setInterval(function(){slideTo(pos+1);},4000);
 })();
 </script>
 
