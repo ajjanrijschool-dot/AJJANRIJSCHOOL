@@ -659,10 +659,18 @@
     const gap=16;
     return item.getBoundingClientRect().width+gap;
   }
+  function getVisible(){
+    const w=window.innerWidth;
+    if(w<600)return 1;
+    if(w<900)return 2;
+    return 5;
+  }
   function slideTo(i){
     if(animating)return;
     animating=true;
-    idx=((i%total)+total)%total;
+    const maxIdx=total-getVisible();
+    const raw=((i%total)+total)%total;
+    idx=raw>maxIdx?0:raw;
     track.style.transform='translateX(-'+(idx*getStep())+'px)';
     setTimeout(function(){animating=false;},750);
   }
