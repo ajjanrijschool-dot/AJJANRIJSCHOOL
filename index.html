@@ -620,15 +620,34 @@
       <h2 class="section-title" data-i18n="gsl_h2">Trots op onze geslaagden!</h2>
       <p class="section-sub" data-i18n="gsl_sub">Elke geslaagde is een feestje. Gefeliciteerd aan al onze leerlingen!</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;" class="reveal">
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd1.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd2.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd3.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd4.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd5.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+    <div style="position:relative;" class="reveal">
+      <div id="gslCarousel" style="display:flex;gap:16px;overflow:hidden;scroll-behavior:smooth;">
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd1.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd2.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd3.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd4.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd5.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd6.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd7.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd8.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd9.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd10.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+      </div>
+      <button onclick="gslPrev()" style="position:absolute;left:-20px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.15);font-size:1.2rem;cursor:pointer;z-index:2;">‹</button>
+      <button onclick="gslNext()" style="position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.15);font-size:1.2rem;cursor:pointer;z-index:2;">›</button>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  const c=document.getElementById('gslCarousel');
+  let idx=0;const total=10;const visible=window.innerWidth<600?1:window.innerWidth<900?2:5;
+  function scrollTo(i){idx=((i%total)+total)%total;c.scrollLeft=idx*(c.scrollWidth/total);}
+  window.gslNext=function(){scrollTo(idx+1);};
+  window.gslPrev=function(){scrollTo(idx-1);};
+  setInterval(function(){scrollTo(idx+1);},3500);
+})();
+</script>
 
 <!-- LOCATIONS -->
 <section style="background:white;padding:5rem 2rem" id="locaties">
