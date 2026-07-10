@@ -620,8 +620,8 @@
       <h2 class="section-title" data-i18n="gsl_h2">Trots op onze geslaagden!</h2>
       <p class="section-sub" data-i18n="gsl_sub">Elke geslaagde is een feestje. Gefeliciteerd aan al onze leerlingen!</p>
     </div>
-    <div style="position:relative;" class="reveal">
-      <div id="gslCarousel" style="display:flex;gap:16px;overflow:hidden;scroll-behavior:smooth;transition:scroll-left 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
+    <div style="position:relative;overflow:hidden;border-radius:16px;" class="reveal">
+      <div id="gslTrack" style="display:flex;gap:16px;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);will-change:transform;">
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd1.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd2.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd3.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
@@ -633,24 +633,31 @@
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd9.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
         <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd10.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
       </div>
-      <button onclick="gslPrev()" style="position:absolute;left:-20px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.15);font-size:1.2rem;cursor:pointer;z-index:2;">‹</button>
-      <button onclick="gslNext()" style="position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.15);font-size:1.2rem;cursor:pointer;z-index:2;">›</button>
+      <button onclick="gslPrev()" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.2);font-size:1.4rem;cursor:pointer;z-index:2;">‹</button>
+      <button onclick="gslNext()" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.2);font-size:1.4rem;cursor:pointer;z-index:2;">›</button>
     </div>
   </div>
 </section>
 <script>
 (function(){
-  const c=document.getElementById('gslCarousel');
-  let idx=0;const total=10;
-  function getItemWidth(){return c.scrollWidth/total;}
+  const track=document.getElementById('gslTrack');
+  const total=10;
+  let idx=0;
+  let animating=false;
+  function getStep(){
+    const item=track.children[0];
+    const gap=16;
+    return item.getBoundingClientRect().width+gap;
+  }
   function slideTo(i){
+    if(animating)return;
+    animating=true;
     idx=((i%total)+total)%total;
-    c.style.scrollBehavior='smooth';
-    c.scrollLeft=idx*getItemWidth();
+    track.style.transform='translateX(-'+(idx*getStep())+'px)';
+    setTimeout(function(){animating=false;},750);
   }
   window.gslNext=function(){slideTo(idx+1);};
   window.gslPrev=function(){slideTo(idx-1);};
-  c.style.scrollBehavior='smooth';
   setInterval(function(){slideTo(idx+1);},4000);
 })();
 </script>
