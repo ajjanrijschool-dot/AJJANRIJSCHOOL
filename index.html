@@ -22,6 +22,93 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
+  <!-- Schema.org structured data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DrivingSchool",
+    "name": "Ajjan Rijschool",
+    "url": "https://ajjanrijschool.nl",
+    "telephone": "+31640401174",
+    "email": "ajjanrijschool@gmail.com",
+    "description": "Ajjan Rijschool biedt professionele rijlessen in Utrecht en Gorinchem. CBR erkend, schakel en automaat, meertalig (NL/EN/AR). Gratis proefles beschikbaar.",
+    "image": "https://ajjanrijschool.nl/hero-banner.png",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Bank transfer, iDEAL",
+    "areaServed": ["Utrecht", "Gorinchem", "Nieuwegein", "Houten", "Vianen"],
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Utrecht",
+        "addressCountry": "NL"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Gorinchem",
+        "addressCountry": "NL"
+      }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wat kost een rijles bij Ajjan Rijschool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bij Ajjan Rijschool kunt u kiezen uit verschillende pakketten. Wij bieden pakketten aan vanaf een proefles tot complete slagingspakketten. Neem contact op voor de actuele prijzen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Geeft Ajjan Rijschool rijlessen in Utrecht?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Ajjan Rijschool geeft rijlessen in Utrecht en omgeving, inclusief Nieuwegein en Houten. Wij zijn CBR erkend en bieden zowel schakel- als automaatrijlessen aan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Geeft Ajjan Rijschool ook rijlessen in Gorinchem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, naast Utrecht geeft Ajjan Rijschool ook rijlessen in Gorinchem en omgeving. U kunt een gratis proefles aanvragen via onze website."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is er een gratis proefles beschikbaar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja! Ajjan Rijschool biedt een gratis proefles aan. Zo kunt u kennismaken met onze instructeur en rijstijl zonder kosten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "In welke talen geeft Ajjan Rijschool rijles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ajjan Rijschool is meertalig. Wij geven rijlessen in het Nederlands, Engels en Arabisch."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -82,6 +169,9 @@
     .hero-stats { display:flex; gap:2rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,.15); }
     .hero-stat strong { display:block; font-size:1.6rem; font-weight:800; color:white; }
     .hero-stat span { font-size:.8rem; color:rgba(255,255,255,.65); }
+    .gsl-item { flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4; }
+    @media(max-width:600px){ .gsl-item { flex:0 0 calc(85% - 8px); } }
+    @media(min-width:601px) and (max-width:900px){ .gsl-item { flex:0 0 calc(45% - 12px); } }
     .hero-visual { display:flex; align-items:center; justify-content:center; position:relative; }
     .car-scene { position:relative; width:100%; max-width:500px; }
     .float-card { position:absolute; background:white; border-radius:14px; padding:12px 16px; box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:10px; font-size:.82rem; font-weight:600; color:var(--dark); animation:floatCard 3s ease-in-out infinite; z-index:2; }
@@ -622,31 +712,31 @@
     </div>
     <div style="position:relative;overflow:hidden;border-radius:16px;" class="reveal">
       <div id="gslTrack" style="display:flex;gap:16px;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);will-change:transform;">
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd1.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd2.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd3.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd4.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd5.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd6.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd7.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd8.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd9.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd10.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd11.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd12.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd13.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd14.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd15.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd16.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd17.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd18.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd19.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd20.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd21.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd22.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd23.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd24.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div style="flex:0 0 calc(20% - 13px);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.10);aspect-ratio:3/4;"><img src="geslaagd25.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd1.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd2.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd3.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd4.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd5.jpg.webp" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd6.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd7.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd8.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd9.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd10.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd11.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd12.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd13.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd14.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd15.jpg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd16.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd17.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd18.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd19.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd20.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd21.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd22.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd23.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd24.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="gsl-item"><img src="geslaagd25.jpg.jpeg.jpeg" alt="Geslaagd bij Rijschool Ajjan" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
       </div>
       <button onclick="gslPrev()" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.2);font-size:1.4rem;cursor:pointer;z-index:2;">‹</button>
       <button onclick="gslNext()" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:white;box-shadow:0 2px 12px rgba(0,0,0,.2);font-size:1.4rem;cursor:pointer;z-index:2;">›</button>
@@ -688,6 +778,39 @@
   setInterval(function(){slideTo(pos+1);},4000);
 })();
 </script>
+
+<!-- FAQ -->
+<section style="padding:80px 0;background:white;">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <p class="section-sub">Alles wat je wilt weten over rijlessen bij Ajjan Rijschool in Utrecht &amp; Gorinchem</p>
+    </div>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px;" class="reveal">
+      <details style="background:#f8faff;border-radius:12px;padding:20px 24px;cursor:pointer;">
+        <summary style="font-weight:700;font-size:1.05rem;color:#0F1F5C;list-style:none;display:flex;justify-content:space-between;align-items:center;">Geeft Ajjan Rijschool rijlessen in Utrecht? <span style="font-size:1.4rem;color:#1D4ED8;">+</span></summary>
+        <p style="margin-top:12px;color:#555;line-height:1.7;">Ja! Ajjan Rijschool geeft professionele rijlessen in Utrecht en omgeving, inclusief Nieuwegein en Houten. Wij zijn CBR erkend en bieden zowel schakelrijlessen als automaatrijlessen aan.</p>
+      </details>
+      <details style="background:#f8faff;border-radius:12px;padding:20px 24px;cursor:pointer;">
+        <summary style="font-weight:700;font-size:1.05rem;color:#0F1F5C;list-style:none;display:flex;justify-content:space-between;align-items:center;">Geeft Ajjan Rijschool ook rijlessen in Gorinchem? <span style="font-size:1.4rem;color:#1D4ED8;">+</span></summary>
+        <p style="margin-top:12px;color:#555;line-height:1.7;">Ja! Naast Utrecht geeft Ajjan Rijschool ook rijlessen in Gorinchem en omgeving. Vraag eenvoudig een gratis proefles aan via onze website.</p>
+      </details>
+      <details style="background:#f8faff;border-radius:12px;padding:20px 24px;cursor:pointer;">
+        <summary style="font-weight:700;font-size:1.05rem;color:#0F1F5C;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is er een gratis proefles beschikbaar? <span style="font-size:1.4rem;color:#1D4ED8;">+</span></summary>
+        <p style="margin-top:12px;color:#555;line-height:1.7;">Ja! Bij Ajjan Rijschool kun je starten met een gratis proefles. Zo maak je kennis met onze instructeur en rijstijl zonder kosten.</p>
+      </details>
+      <details style="background:#f8faff;border-radius:12px;padding:20px 24px;cursor:pointer;">
+        <summary style="font-weight:700;font-size:1.05rem;color:#0F1F5C;list-style:none;display:flex;justify-content:space-between;align-items:center;">Wat kost een rijles bij Ajjan Rijschool? <span style="font-size:1.4rem;color:#1D4ED8;">+</span></summary>
+        <p style="margin-top:12px;color:#555;line-height:1.7;">Wij bieden verschillende pakketten aan voor zowel schakel als automaat rijlessen. Bekijk onze pakketten op de website of neem contact op via 06-40 40 11 74 voor de actuele prijzen.</p>
+      </details>
+      <details style="background:#f8faff;border-radius:12px;padding:20px 24px;cursor:pointer;">
+        <summary style="font-weight:700;font-size:1.05rem;color:#0F1F5C;list-style:none;display:flex;justify-content:space-between;align-items:center;">In welke talen geeft Ajjan Rijschool rijles? <span style="font-size:1.4rem;color:#1D4ED8;">+</span></summary>
+        <p style="margin-top:12px;color:#555;line-height:1.7;">Ajjan Rijschool is meertalig. Wij geven rijlessen in het Nederlands, Engels én Arabisch. Zo voelt iedereen zich welkom.</p>
+      </details>
+    </div>
+  </div>
+</section>
 
 <!-- LOCATIONS -->
 <section style="background:white;padding:5rem 2rem" id="locaties">
