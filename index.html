@@ -748,6 +748,7 @@
   const track=document.getElementById('gslTrack');
   const total=25;
   const vis=5;
+  function getVis(){return window.innerWidth<600?1:window.innerWidth<900?2:5;}
   const all=Array.from(track.children);
   all.slice(-vis).forEach(function(el){track.insertBefore(el.cloneNode(true),track.firstChild);});
   all.slice(0,vis).forEach(function(el){track.appendChild(el.cloneNode(true));});
@@ -767,8 +768,9 @@
     pos=p;
     track.style.transform='translateX(-'+(pos*getStep())+'px)';
     setTimeout(function(){
-      if(pos>=total+vis)jumpTo(vis);
-      else if(pos<vis)jumpTo(total);
+      var v=getVis();
+      if(pos>=total+v)jumpTo(v);
+      else if(pos<v)jumpTo(total);
       animating=false;
     },750);
   }
