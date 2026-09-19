@@ -179,6 +179,21 @@
     .hdot.active { background:#FCD34D;transform:scale(1.4); }
     @keyframes heroRoad { from{transform:translateX(0)} to{transform:translateX(-80px)} }
     @keyframes heroCar { from{left:8%} to{left:65%} }
+    .exp-scene { opacity:0; transition:opacity .55s ease; pointer-events:none; }
+    .exp-scene.active { opacity:1; pointer-events:auto; }
+    @keyframes expPopIn   { from{transform:scale(.6) translateY(16px);opacity:0} to{transform:scale(1) translateY(0);opacity:1} }
+    @keyframes expSlideL  { from{transform:translateX(-50px);opacity:0} to{transform:translateX(0);opacity:1} }
+    @keyframes expSlideU  { from{transform:translateY(40px);opacity:0} to{transform:translateY(0);opacity:1} }
+    @keyframes expFadeIn  { from{opacity:0} to{opacity:1} }
+    @keyframes expBarAnim { from{width:0%} to{width:var(--w,65%)} }
+    .exp-scene.active .exp-bubble  { animation:expPopIn  .5s cubic-bezier(.34,1.56,.64,1) both .1s; }
+    .exp-scene.active .exp-car     { animation:expSlideL .6s ease both .1s; }
+    .exp-scene.active .exp-lesbar  { animation:expSlideU .6s ease both .35s; }
+    .exp-scene.active .exp-cards   { animation:expFadeIn .5s ease both .2s; }
+    .exp-scene.active .exp-invoice { animation:expSlideL .55s ease both .1s; }
+    .exp-scene.active .exp-keys    { animation:expSlideU .55s ease both .25s; }
+    .exp-scene.active .exp-cta     { animation:expPopIn  .55s cubic-bezier(.34,1.56,.64,1) both .15s; }
+    .exp-scene.active .exp-subtitle{ animation:expFadeIn .5s ease both .3s; }
     .hero-visual { display:flex; align-items:center; justify-content:center; position:relative; width:100%; margin-top:2rem; }
     .car-scene { position:relative; width:100%; max-width:700px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:24px; padding:32px; backdrop-filter:blur(8px); overflow:hidden; }
     .float-card { position:absolute; background:white; border-radius:14px; padding:12px 16px; box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:10px; font-size:.82rem; font-weight:600; color:var(--dark); animation:floatCard 3s ease-in-out infinite; z-index:2; }
@@ -407,69 +422,112 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="car-scene" style="width:100%;padding:0;">
+      <!-- ═══ EXPLAINER WIDGET ═══ -->
+      <div id="exp" style="width:100%;max-width:640px;border-radius:20px;overflow:hidden;aspect-ratio:4/3;position:relative;background:linear-gradient(160deg,#cce9f2 0%,#e0f3f9 100%);box-shadow:0 24px 60px rgba(0,0,0,.25);">
 
-        <!-- Floating badges -->
-        <div class="float-card" style="top:0;right:0;position:absolute;z-index:2;">
-          <div class="fc-icon" style="background:#EFF6FF">✅</div>
-          <div><div style="font-size:.7rem;color:#64748B">CBR erkend</div><div>Rijschool</div></div>
-        </div>
-        <div class="float-card" style="top:70px;right:0;position:absolute;z-index:2;">
-          <div class="fc-icon" style="background:#ECFDF5">🆓</div>
-          <div><div style="font-size:.7rem;color:#64748B" data-i18n="fc2a">Proefles</div><div style="color:#065F46" data-i18n="fc2b">Gratis!</div></div>
-        </div>
+        <!-- top progress bar -->
+        <div id="expBar" style="position:absolute;top:0;left:0;height:4px;background:#F97316;border-radius:0 2px 2px 0;width:0%;z-index:10;"></div>
 
-        <!-- Animated steps -->
-        <div id="heroSlides" style="position:relative;height:200px;margin-top:16px;overflow:hidden;">
-
-          <div class="hslide active" id="hslide-0">
-            <div style="font-size:2.2rem;margin-bottom:10px;">📞</div>
-            <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Stap 1 van 4</div>
-            <div style="font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px;">Neem <span style="color:#FCD34D;">contact</span> op</div>
-            <div style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6;">Bel, WhatsApp of vul het formulier in. Wij plannen snel een afspraak voor jou.</div>
+        <!-- SCENE 1: Hoe? -->
+        <div class="exp-scene active" id="es0" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px;">
+          <div class="exp-bubble" style="background:#F97316;color:white;font-weight:900;font-size:clamp(1.1rem,2.8vw,1.6rem);padding:.5em 1.3em;border-radius:50px;box-shadow:0 6px 20px rgba(249,115,22,.4);position:relative;text-align:center;">
+            Hoe werkt Ajjan Rijschool?
+            <span style="position:absolute;bottom:-13px;left:50%;transform:translateX(-50%);border:9px solid transparent;border-top-color:#F97316;"></span>
           </div>
-
-          <div class="hslide" id="hslide-1">
-            <div style="font-size:2.2rem;margin-bottom:10px;">🎓</div>
-            <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Stap 2 van 4</div>
-            <div style="font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px;">Gratis <span style="color:#FCD34D;">proefles</span></div>
-            <div style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6;">Maak kennis met Ajjan en de lesauto. Geen kosten, geen verplichtingen.</div>
-          </div>
-
-          <div class="hslide" id="hslide-2">
-            <div style="font-size:2.2rem;margin-bottom:10px;">🚗</div>
-            <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Stap 3 van 4</div>
-            <div style="font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px;">Rijlessen <span style="color:#FCD34D;">op maat</span></div>
-            <div style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6;">Schakel of automaat, jouw tempo. In het Nederlands, Engels of Arabisch.</div>
-          </div>
-
-          <div class="hslide" id="hslide-3">
-            <div style="font-size:2.2rem;margin-bottom:10px;">🏆</div>
-            <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Stap 4 van 4</div>
-            <div style="font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px;"><span style="color:#FCD34D;">Geslaagd!</span> Jij ook</div>
-            <div style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6;">Met persoonlijke begeleiding haal jij jouw rijbewijs bij Ajjan Rijschool.</div>
-          </div>
-
+          <p class="exp-subtitle" style="color:#1a3a4a;font-size:1rem;font-weight:600;text-align:center;line-height:1.6;">Ajjan begeleidt je stap voor stap<br>naar je rijbewijs — in Utrecht &amp; Gorinchem.</p>
         </div>
 
-        <!-- Progress bar -->
-        <div style="width:100%;height:3px;background:rgba(255,255,255,.15);border-radius:2px;margin:12px 0;">
-          <div id="heroPFill" style="height:100%;background:#FCD34D;border-radius:2px;width:0%;transition:none;"></div>
+        <!-- SCENE 2: Auto + lessen -->
+        <div class="exp-scene" id="es1" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;">
+          <div class="exp-car" style="width:82%;max-width:320px;">
+            <svg viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;">
+              <line x1="0" y1="148" x2="340" y2="148" stroke="#b0ccd4" stroke-width="2"/>
+              <rect x="30" y="82" width="280" height="62" rx="14" fill="#c8d8dc"/>
+              <path d="M80 82 Q100 44 170 40 Q240 44 265 82Z" fill="#b0c4c8"/>
+              <path d="M100 80 Q112 52 148 50 L148 80Z" fill="#8ec8e0" opacity=".9"/>
+              <path d="M155 80 L155 50 Q195 48 215 80Z" fill="#8ec8e0" opacity=".9"/>
+              <line x1="150" y1="50" x2="150" y2="80" stroke="#a0b8bc" stroke-width="2"/>
+              <rect x="92" y="82" width="72" height="50" rx="4" fill="#bcccd0" stroke="#a0b8bc" stroke-width="1"/>
+              <rect x="168" y="82" width="80" height="50" rx="4" fill="#bcccd0" stroke="#a0b8bc" stroke-width="1"/>
+              <rect x="178" y="92" width="60" height="32" rx="6" fill="white" opacity=".9"/>
+              <text x="208" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="9" fill="#0D1B2A">AJJAN</text>
+              <text x="208" y="115" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="7" fill="#F97316">RIJSCHOOL</text>
+              <rect x="168" y="34" width="3" height="20" fill="#0D1B2A"/>
+              <polygon points="171,34 185,40 171,46" fill="#F97316"/>
+              <circle cx="100" cy="148" r="22" fill="#2a3a3e"/><circle cx="100" cy="148" r="13" fill="#445254"/><circle cx="100" cy="148" r="5" fill="#8aa0a4"/>
+              <circle cx="240" cy="148" r="22" fill="#2a3a3e"/><circle cx="240" cy="148" r="13" fill="#445254"/><circle cx="240" cy="148" r="5" fill="#8aa0a4"/>
+              <rect x="30" y="96" width="18" height="10" rx="5" fill="#f0e060" opacity=".9"/>
+              <rect x="296" y="96" width="14" height="10" rx="5" fill="#e05050" opacity=".9"/>
+            </svg>
+          </div>
+          <div class="exp-lesbar" style="display:flex;align-items:center;gap:14px;">
+            <span style="font-size:1.8rem;">👨‍🏫</span>
+            <div style="width:170px;height:20px;background:rgba(0,0,0,.1);border-radius:50px;overflow:hidden;">
+              <div id="expBarLesson" style="height:100%;background:#F97316;border-radius:50px;width:0%;transition:width 1.5s ease .2s;"></div>
+            </div>
+            <div style="line-height:1.1;"><div style="font-weight:900;font-size:1.4rem;color:#1a3a4a;">20</div><div style="font-size:.72rem;color:#4a7080;">lessen</div></div>
+          </div>
+          <p class="exp-subtitle" style="color:#1a3a4a;font-size:.85rem;font-weight:600;text-align:center;">...om je rijbewijs te halen.</p>
         </div>
 
-        <!-- Step dots -->
-        <div style="display:flex;gap:8px;margin-bottom:16px;">
-          <button onclick="heroGoTo(0)" class="hdot active" id="hdot-0"></button>
-          <button onclick="heroGoTo(1)" class="hdot" id="hdot-1"></button>
-          <button onclick="heroGoTo(2)" class="hdot" id="hdot-2"></button>
-          <button onclick="heroGoTo(3)" class="hdot" id="hdot-3"></button>
+        <!-- SCENE 3: Schakel / Automaat -->
+        <div class="exp-scene" id="es2" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;">
+          <div class="exp-bubble" style="background:#F97316;color:white;font-weight:900;font-size:clamp(.9rem,2.2vw,1.15rem);padding:.45em 1.2em;border-radius:50px;text-align:center;">Schakel of automaat — jij kiest!</div>
+          <div class="exp-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;">
+            <div style="background:white;border-radius:14px;padding:13px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.08);animation:expSlideU .5s ease both .1s;">
+              <div style="font-size:1.5rem;">⚙️</div>
+              <div style="font-weight:900;font-size:.88rem;color:#1a3a4a;">Schakel</div>
+              <div style="font-size:.72rem;color:#5a8090;">Volledige controle</div>
+            </div>
+            <div style="background:white;border-radius:14px;padding:13px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.08);animation:expSlideU .5s ease both .2s;">
+              <div style="font-size:1.5rem;">🚗</div>
+              <div style="font-weight:900;font-size:.88rem;color:#1a3a4a;">Automaat</div>
+              <div style="font-size:.72rem;color:#5a8090;">Sneller leren</div>
+            </div>
+            <div style="background:white;border-radius:14px;padding:13px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.08);animation:expSlideU .5s ease both .3s;">
+              <div style="font-size:1.5rem;">🌍</div>
+              <div style="font-weight:900;font-size:.88rem;color:#1a3a4a;">Meertalig</div>
+              <div style="font-size:.72rem;color:#5a8090;">NL · EN · AR</div>
+            </div>
+            <div style="background:white;border-radius:14px;padding:13px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.08);animation:expSlideU .5s ease both .4s;">
+              <div style="font-size:1.5rem;">✅</div>
+              <div style="font-weight:900;font-size:.88rem;color:#1a3a4a;">CBR erkend</div>
+              <div style="font-size:.72rem;color:#5a8090;">Utrecht &amp; Gorinchem</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Road -->
-        <div style="position:relative;height:80px;overflow:hidden;border-radius:10px;">
-          <div style="position:absolute;bottom:0;left:-5%;width:110%;height:44px;background:#1e2a44;border-radius:6px;"></div>
-          <div id="heroRoadLine" style="position:absolute;bottom:18px;left:0;width:200%;height:4px;background:repeating-linear-gradient(to right,#F59E0B 0,#F59E0B 40px,transparent 40px,transparent 80px);animation:heroRoad 1.2s linear infinite;"></div>
-          <div style="position:absolute;bottom:42px;font-size:2rem;line-height:1;animation:heroCar 3s ease-in-out infinite alternate;">🚗</div>
+        <!-- SCENE 4: Gratis proefles -->
+        <div class="exp-scene" id="es3" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:24px;padding:28px;">
+          <div class="exp-invoice" style="background:white;border-radius:14px;padding:20px 24px;box-shadow:0 8px 28px rgba(0,0,0,.12);min-width:150px;">
+            <div style="font-weight:900;font-size:1.2rem;color:#1a3a4a;margin-bottom:10px;">Factuur</div>
+            <div style="height:8px;background:#f0a070;border-radius:4px;margin:6px 0;"></div>
+            <div style="height:8px;background:#f0a070;border-radius:4px;margin:6px 0;width:60%;"></div>
+            <div style="height:8px;background:#f0a070;border-radius:4px;margin:6px 0;"></div>
+            <div style="font-weight:900;color:#e44;font-size:1rem;margin-top:12px;">Proefles &nbsp;−€0</div>
+          </div>
+          <div class="exp-keys" style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div class="exp-bubble" style="background:#F97316;color:white;font-weight:900;font-size:1rem;padding:.45em 1em;border-radius:50px;text-align:center;box-shadow:0 4px 16px rgba(249,115,22,.35);">Gratis<br>proefles!</div>
+            <div style="font-size:3.2rem;animation:expPopIn .6s cubic-bezier(.34,1.56,.64,1) both .5s;">🔑</div>
+          </div>
+        </div>
+
+        <!-- SCENE 5: CTA -->
+        <div class="exp-scene" id="es4" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:28px;text-align:center;">
+          <div style="font-weight:700;font-size:.9rem;color:#1a3a4a;">Ajjan Rijschool — Utrecht &amp; Gorinchem</div>
+          <a href="#contact" style="background:#F97316;color:white;font-weight:900;font-size:clamp(.85rem,2vw,1.1rem);padding:.65em 1.5em;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(249,115,22,.4);">
+            Ja, ik wil een gratis proefles! <span>→</span>
+          </a>
+          <div style="font-size:.78rem;color:#4a7080;">Geen kosten, geen verplichtingen.</div>
+        </div>
+
+        <!-- Dots -->
+        <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:10;">
+          <button onclick="expGo(0)" class="expdot active" id="ed0" style="width:8px;height:8px;border-radius:50%;background:#F97316;border:none;cursor:pointer;padding:0;transform:scale(1.3);transition:all .3s;"></button>
+          <button onclick="expGo(1)" class="expdot" id="ed1" style="width:8px;height:8px;border-radius:50%;background:rgba(26,58,74,.2);border:none;cursor:pointer;padding:0;transition:all .3s;"></button>
+          <button onclick="expGo(2)" class="expdot" id="ed2" style="width:8px;height:8px;border-radius:50%;background:rgba(26,58,74,.2);border:none;cursor:pointer;padding:0;transition:all .3s;"></button>
+          <button onclick="expGo(3)" class="expdot" id="ed3" style="width:8px;height:8px;border-radius:50%;background:rgba(26,58,74,.2);border:none;cursor:pointer;padding:0;transition:all .3s;"></button>
+          <button onclick="expGo(4)" class="expdot" id="ed4" style="width:8px;height:8px;border-radius:50%;background:rgba(26,58,74,.2);border:none;cursor:pointer;padding:0;transition:all .3s;"></button>
         </div>
 
       </div>
@@ -821,30 +879,43 @@
   setInterval(function(){slideTo(pos+1);},4000);
 })();
 
-// Hero step animation
+// Explainer widget
 (function(){
-  var cur=0;
-  var total=4;
-  var STEP=4000;
-  var timer;
-  function goTo(idx){
-    var slides=document.querySelectorAll('.hslide');
-    var dots=document.querySelectorAll('.hdot');
-    var fill=document.getElementById('heroPFill');
-    slides[cur].classList.remove('active');
-    slides[cur].classList.add('exit');
-    var exitIdx=cur;
-    setTimeout(function(){slides[exitIdx].classList.remove('exit');},700);
-    dots[cur].classList.remove('active');
-    cur=idx;
-    slides[cur].classList.add('active');
-    dots[cur].classList.add('active');
-    if(fill){fill.style.transition='none';fill.style.width='0%';setTimeout(function(){fill.style.transition='width '+STEP+'ms linear';fill.style.width='100%';},30);}
+  var cur=0, TOTAL=5, STEP=4500, timer;
+  var scenes=document.querySelectorAll('.exp-scene');
+  var dots=document.querySelectorAll('.expdot');
+  var bar=document.getElementById('expBar');
+  var lessonBar=document.getElementById('expBarLesson');
+
+  function expGo(idx){
+    // remove active from current
+    scenes[cur].classList.remove('active');
+    dots[cur].style.background='rgba(26,58,74,.2)';
+    dots[cur].style.transform='scale(1)';
+    cur=(idx+TOTAL)%TOTAL;
+    // restart CSS animations by re-inserting the node
+    var s=scenes[cur];
+    var parent=s.parentNode;
+    var next=s.nextSibling;
+    parent.removeChild(s);
+    parent.insertBefore(s,next);
+    // activate
+    s.classList.add('active');
+    dots[cur].style.background='#F97316';
+    dots[cur].style.transform='scale(1.3)';
+    // lesson bar
+    if(cur===1&&lessonBar){lessonBar.style.transition='none';lessonBar.style.width='0%';setTimeout(function(){lessonBar.style.transition='width 1.5s ease .2s';lessonBar.style.width='65%';},50);}
+    // top progress bar
+    if(bar){bar.style.transition='none';bar.style.width=((cur/TOTAL)*100)+'%';setTimeout(function(){bar.style.transition='width '+STEP+'ms linear';bar.style.width=(((cur+1)/TOTAL)*100)+'%';},40);}
     clearTimeout(timer);
-    timer=setTimeout(function(){goTo((cur+1)%total);},STEP);
+    timer=setTimeout(function(){expGo(cur+1);},STEP);
   }
-  window.heroGoTo=goTo;
-  goTo(0);
+  window.expGo=expGo;
+  // start first bar fill
+  setTimeout(function(){
+    if(bar){bar.style.transition='width '+STEP+'ms linear';bar.style.width=((1/TOTAL)*100)+'%';}
+    timer=setTimeout(function(){expGo(1);},STEP);
+  },40);
 })();
 </script>
 
